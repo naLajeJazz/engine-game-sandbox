@@ -3,7 +3,7 @@ import Obj from './obj.js'
 import {canvas} from './obj.js'
 import {ctx} from './obj.js'
 
-import{mouseImg} from './Img.js'
+import{mouseImg,btnImg} from './Img.js'
 
 
  
@@ -26,11 +26,16 @@ let debug=new Obj(600,0),
 let mouse=new Obj(0,0,64,64),
 mouseCollideBloco=new Obj(mouse.x,mouse.y,mouse.w,mouse.h),
 mouseCollideBloco2=new Obj(mouse.x,mouse.y,mouse.w,mouse.h),
+mouseCollideBtn=new Obj(mouse.x,mouse.y,mouse.w,mouse.h),
 drag=false,
     click=false;
 
 let bloco=new Obj(300,300,64,64),drag1=false;
 let bloco2=new Obj(600,300,64,64),drag2=false;
+
+let btn =new Obj(300,300,64,64),
+    onOff =false,
+    btnCollideMouse=new Obj(btn.x,btn.y,btn.w,btn.h);
     
 
 /////////
@@ -42,8 +47,8 @@ let bloco2=new Obj(600,300,64,64),drag2=false;
 
 window.addEventListener("keyup",()=>{
                
-                 
-                  
+                
+               
                 },false);
 
 window.addEventListener("keydown",function(event){
@@ -52,7 +57,7 @@ window.addEventListener("keydown",function(event){
                              
                   if (k == "d" ){
                                          
-                  
+                 
 
                   }else if(k =="a" ){
 
@@ -102,8 +107,17 @@ canvas.addEventListener('mousemove',function(e){
 
                   
               },false);
-canvas.addEventListener('mousedown',function(){
+
+canvas.addEventListener('click',function(e){
+                
                   click=true
+                  setTimeout(() => {
+                    click=false
+                  }, 10);
+                  
+              },false);
+
+canvas.addEventListener('mousedown',function(){
                   
                  
                  
@@ -121,11 +135,17 @@ canvas.addEventListener('mouseover',function(){
 /////////
 
 ///anima Sprite
-let xIndex=0
-let yIndex=0
+let xIndex=0;
+let yIndex=0;
 let animaSpd=8//tem que ser multiplos de 2
 setInterval(()=>xIndex+=64,1000/animaSpd);//a cada segundo pula 64 px na imagem, quatro frames na horizontal
 setInterval(()=>xIndex=0,4000/animaSpd);//quando chegar na ultima imagem volta pra primeira
+
+  
+
+
+
+
 
 //////GAME////
     
@@ -140,22 +160,77 @@ ctx.clearRect(0,0,canvas.width,canvas.height);
 mouseCollideBloco.x=mouse.x;
 mouseCollideBloco.y=mouse.y;
 
+//
 mouseCollideBloco2.x=mouse.x;
 mouseCollideBloco2.y=mouse.y;
 //
+mouseCollideBtn.x=mouse.x;
+mouseCollideBtn.y=mouse.y;
+//
+
+//
+btnCollideMouse.x=btn.x;
+btnCollideMouse.y=btn.y;
 
 ///checa as colisoes das masks
-mouseCollideBloco.collide(bloco.x,bloco.y,bloco.w,bloco.h)
-mouseCollideBloco2.collide(bloco2.x,bloco2.y,bloco2.w,bloco2.h)
-///
+mouseCollideBloco.collide(bloco.x,bloco.y,bloco.w,bloco.h);
+mouseCollideBloco2.collide(bloco2.x,bloco2.y,bloco2.w,bloco2.h);
+mouseCollideBtn.collide(btn.x,btn.y,btn.w,btn.h);
+btnCollideMouse.collide(mouse.x,mouse.y,mouse.w,mouse.h);
+
+
+
+
+
+
+if(btnCollideMouse.collideBolean&&click){
+  if(!onOff){
+    onOff=true;
+   
+  }else
+  if(onOff){
+    onOff=false;
+  }
+}   
+
+if(!onOff){
+  btn.SpriteAnime(btnImg,0,yIndex)
+}else{
+  btn.SpriteAnime(btnImg,0,yIndex+64)
+}
+
+
+
+
+
+
+
+
+
 
 
                             ////DRAW/////
 
+
+
+
+ 
+
+ 
+ 
+
+
+
+
+/*
 bloco.Draw("green")
 bloco2.Draw("red")
+*/
 
 
+
+
+/*
 ///executa interaçao se houver colisão
 //com bloco
 //checa se over
@@ -187,24 +262,34 @@ if (mouseCollideBloco2.collideBolean&&click&&!drag1){
 }else{drag2=false}
 
 ///
-
+*/
 
 
 
 if (debugMode){
-
+/*
 debug.hudMsg(debug.x,debug.y+16,"white","19px DePixel",`
 mouse.x: ${mouse.x}
 mouse.y: ${mouse.y} 
 click: ${click}
 colide bloco: ${ mouseCollideBloco.collideBolean }
 colide: ${ mouseCollideBloco2.collideBolean }
-d: ${ drag }
+drag1: ${ drag1 }
+drag2: ${ drag2 }
+
+
+`)
+*/
+debug.hudMsg(debug.x,debug.y+16,"white","19px DePixel",`
+btn.CollideBolean=${btnCollideMouse.collideBolean }       
+onOff=${onOff }
+click=${click }
 
 
 `)
 
 }
+
 /*
 txt.x+=txt.spd
 txt.hudMsg(txt.x,txt.y,"gray","100px DePixel ","Game Engine")
