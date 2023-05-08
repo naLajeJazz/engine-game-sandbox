@@ -4,6 +4,7 @@ import {canvas} from './obj.js'
 import {ctx} from './obj.js'
 
 import{mouseImg,btnImg} from './Img.js'
+import { debugMode,mouse,click } from './controller.js'
 
 
  
@@ -19,16 +20,14 @@ setInterval(()=>txt.spd=0.5 ,8000);
 
 let logo=new Obj(canvas.width/2,canvas.height/2,800,800)
 
-let debug=new Obj(600,0),
-    debugMode=true;
+let debug=new Obj(600,0);
+    
 
 
-let mouse=new Obj(0,0,64,64),
+let 
 mouseCollideBloco=new Obj(mouse.x,mouse.y,mouse.w,mouse.h),
 mouseCollideBloco2=new Obj(mouse.x,mouse.y,mouse.w,mouse.h),
-mouseCollideBtn=new Obj(mouse.x,mouse.y,mouse.w,mouse.h),
-drag=false,
-    click=false;
+mouseCollideBtn=new Obj(mouse.x,mouse.y,mouse.w,mouse.h);
 
 let bloco=new Obj(300,300,64,64),drag1=false;
 let bloco2=new Obj(600,300,64,64),drag2=false;
@@ -41,98 +40,6 @@ let btn =new Obj(300,300,64,64),
 /////////
 
 
-////controles////
-
-////teclado
-
-window.addEventListener("keyup",()=>{
-               
-                
-               
-                },false);
-
-window.addEventListener("keydown",function(event){
-
-                  let k= event.key;
-                             
-                  if (k == "d" ){
-                                         
-                 
-
-                  }else if(k =="a" ){
-
-                 
-                                        
-                  }else if (k=="w"){
-
-               
-
-                  }else if (k=="t"){
-                  debugMode=true           
-                  }else if (k=="y"){
-                  debugMode=false           
-                  }
-                  else if (k=="f"){
-                                
-                  }
-                  else if (k=="g"){
-                                
-                  }
-                  else if (k=="e"){
-                                  
-                  }
-                  else if (k=="q"){
-                               
-                  }
-                  else if (k=="p"){
-                                 
-                  }
-                  else if (k=="o"){
-                      
-                  }
-                  else if (k=="x"){
-                       
-                  }
-                  else if (k=="z"){
-                       
-                  }
-                  },false);
-
-
-///mouse
-                  
-canvas.addEventListener('mousemove',function(e){
-                  mouse.x=e.offsetX;
-                  mouse.y=e.offsetY;
-
-                  
-              },false);
-
-canvas.addEventListener('click',function(e){
-                
-                  click=true
-                  setTimeout(() => {
-                    click=false
-                  }, 10);
-                  
-              },false);
-
-canvas.addEventListener('mousedown',function(){
-                  
-                 
-                 
-              },false);
-canvas.addEventListener('mouseup',function(){
-                  click=false
-                 
-                  
-              },false);
-canvas.addEventListener('mouseover',function(){
-                  ////
-                  
-              },false);
-               
-/////////
 
 ///anima Sprite
 let xIndex=0;
@@ -142,9 +49,6 @@ setInterval(()=>xIndex+=64,1000/animaSpd);//a cada segundo pula 64 px na imagem,
 setInterval(()=>xIndex=0,4000/animaSpd);//quando chegar na ultima imagem volta pra primeira
 
   
-
-
-
 
 
 //////GAME////
@@ -211,26 +115,9 @@ if(!onOff){
 
                             ////DRAW/////
 
-
-
-
- 
-
- 
- 
-
-
-
-
-/*
 bloco.Draw("green")
 bloco2.Draw("red")
-*/
 
-
-
-
-/*
 ///executa interaçao se houver colisão
 //com bloco
 //checa se over
@@ -262,7 +149,7 @@ if (mouseCollideBloco2.collideBolean&&click&&!drag1){
 }else{drag2=false}
 
 ///
-*/
+
 
 
 
@@ -281,9 +168,7 @@ drag2: ${ drag2 }
 `)
 */
 debug.hudMsg(debug.x,debug.y+16,"white","19px DePixel",`
-btn.CollideBolean=${btnCollideMouse.collideBolean }       
-onOff=${onOff }
-click=${click }
+debugmode${debugMode}
 
 
 `)
