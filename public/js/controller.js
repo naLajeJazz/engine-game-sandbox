@@ -4,7 +4,7 @@ import {canvas} from './obj.js'
 
 let mouse=new Obj(0,0,64,64),
  debugMode=false,
-click=false;
+ click=false;
 
 
 
