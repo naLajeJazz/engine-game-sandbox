@@ -3,8 +3,8 @@ import Obj from './obj.js'
 import {canvas} from './obj.js'
 
 let debug=new Obj(600,0,64,64);
-let mouse=new Obj(0,0,64,64),
- debugMode=false,
+let mouse=new Obj(200,300,64,64),
+ debugMode=true,
  click=false;
 
 

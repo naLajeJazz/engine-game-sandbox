@@ -18,18 +18,24 @@ canvas.style.backgroundColor="black";
 ////Objetos////
 
 let txt=new Obj(canvas.width/2,canvas.height/2,800,800,0.5),
-text=["Olá Rodrigo!","Oque vamos criar hoje?","Lembre-se de fazer modulos","Engine Game"];
-let rand= Math.floor((Math.random() * text.length) )
+text=["Olá Rodrigo!","Oque vamos criar hoje?","Engine Game"];
+let rand= 0;
+setInterval(() => {rand=Math.floor((Math.random() * text.length) ) }, 5000);
 
+let animeTest=new Obj(canvas.width/2-150,canvas.height/2-150,300,300);
 
-
-let animeTest=new Obj(100,400,300,300);
-let slime=new Obj(Math.floor((Math.random() * canvas.width) ),Math.floor((Math.random() * canvas.height) ),64,64);
+let slime=new Obj(animeTest.x,animeTest.y-64,64,64);
 
 
 let mouseCollideBloco=new Obj(mouse.x,mouse.y,mouse.w,mouse.h);
-let bloco=new Obj(300,200,64,64),drag=false;
 
+let bloco=new Obj(300,200,64,64),drag=false;
+let orcs=[];
+let loteOrcs=800;
+for(let i=0;i<loteOrcs;i++){
+  orcs[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height),2,2,0.3);
+  
+};
 
 
 //////GAME////
@@ -41,10 +47,27 @@ ctx.clearRect(0,0,canvas.width,canvas.height);
                     /////GAME UPDATE//////
 col();
 
+for(let i=0;i<loteOrcs;i++){
+ 
+orcs[i].y+=orcs[i].spd
+if(orcs[i].y>canvas.height){
+  orcs[i].y=-32
+}
+ 
+};                         
+
+
+
                             ////DRAW/////
-                           
-animeTest.SpriteAnime(monitorImg,xIndex,yIndex,animeTest.w,animeTest.h)
-slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+128,slime.w,slime.h)
+
+for(let i=0;i<loteOrcs;i++){
+ 
+    orcs[i].Draw("#0E7C7B");
+   if(orcs[i].collideBolean){
+    orcs[i].Draw("orange");
+   }
+   
+};                         
 
 
 /*
@@ -73,20 +96,27 @@ if (mouseCollideBloco.collideBolean&&click){
 
 if (debugMode){
 
+                           
+  animeTest.SpriteAnime(monitorImg,xIndex,yIndex,animeTest.w,animeTest.h)
+  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+128,slime.w,slime.h)
+  txt.hudMsg(txt.x,txt.y,"#17BEBB","22px DePixel ",text[rand],0.7 )
+  
+
+
+/*
 debug.hudMsg(debug.x,debug.y+16,"white","19px DePixel",`
 debugmode  ${debugMode}   
 click  ${click}   
-xIndex  ${xIndex}   
-xIndexSlime  ${xIndexSlime}   
-
+${orcs[0].collideBolean}
+${orcs[1].collideBolean}
 
 `)
-
+*/
 }
 
 
 
-txt.hudMsg(txt.x,txt.y,"#17BEBB","40px DePixel ",text[rand],0.5 )
+
 
 
 
@@ -98,5 +128,12 @@ game();
 
 
 export{
-  mouseCollideBloco,mouse,bloco,animeTest,slime
+  mouseCollideBloco,
+  mouse,
+  bloco,
+  animeTest,
+  slime,
+  orcs,
+  loteOrcs
+  
 }

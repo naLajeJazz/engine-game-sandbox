@@ -87,7 +87,7 @@ ctx.save()
 ctx.globalAlpha = alpha;
 ctx.font = fntSizefont;
 ctx.fillStyle = msgColor;
-ctx.textAlign = "start";
+ctx.textAlign = "center";
 ctx.fillText(msg, this.msgX, this.msgY);
 ctx.restore()
 }
