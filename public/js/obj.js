@@ -18,12 +18,14 @@ export default class Obj {
     
 
   };
-  DrawLine(toX,toY,hitX,hitY,alpha){
+  DrawLine(toX,toY,hitX,hitY,color,lineWidth,alpha){
     ctx.save()
     this.toX=toX
     this.toY=toY
     this.hitX=hitX
     this.hitY=hitY
+    ctx.lineWidth =lineWidth;
+    ctx.strokeStyle = color;
     this.alpha=alpha
     ctx.globalAlpha = alpha;
     ctx.beginPath();
@@ -41,12 +43,13 @@ export default class Obj {
     ctx.restore()
   };
   DrawRect(color,lineWidth){
-    
+    ctx.save()
     ctx.beginPath();
     ctx.lineWidth =lineWidth;
     ctx.strokeStyle = color;
     ctx.rect(this.x, this.y, this.w,this.h);
     ctx.stroke();
+    ctx.restore()
   };
   DrawCicle(radius,sAngle,eAngle,color,colorfill,alpha){
     ctx.beginPath();
@@ -66,28 +69,25 @@ export default class Obj {
   }
 
    collide(hitX,hitY,hitW,hitH){
-    
     this.collideBolean = false;
     this.hitX=hitX;
     this.hitY=hitY;
     this.hitW=hitW;
     this.hitH=hitH;
-   
 if(this.x<=this.hitX+this.hitW&&this.x+this.w>=this.hitX&&this.y+this.h>=this.hitY&&this.y<=this.hitY+this.hitH)
 {this.collideBolean=true}else{this.collideBolean=false}
 
-
-
 }; 
 
-hudMsg(msgX,msgY,msgColor,fntSizefont,msg){
+hudMsg(msgX,msgY,msgColor,fntSizefont,msg,alpha){
 this.msgX=msgX;
 this.msgY=msgY;
 this.msgColor=msgColor;
 ctx.save()
+ctx.globalAlpha = alpha;
 ctx.font = fntSizefont;
 ctx.fillStyle = msgColor;
-ctx.textAlign = "center";
+ctx.textAlign = "start";
 ctx.fillText(msg, this.msgX, this.msgY);
 ctx.restore()
 }
@@ -99,11 +99,13 @@ Sprite=(img,spw,sph)=>{
   ctx.drawImage(this.img,this.x,this.y,this.spw,this.sph); 
 
   };
-SpriteAnime=(img,xIndex,yIndex)=>{
+SpriteAnime=(img,xIndex,yIndex,spw,sph)=>{
     this.img=img;
+    this.spw = spw
+    this.sph = sph
     this.xIndex=xIndex;
-    this.yIndex=yIndex                
-    ctx.drawImage(this.img,this.xIndex,this.yIndex,64,64,this.x,this.y,this.w,this.h); 
+    this.yIndex=yIndex;               
+    ctx.drawImage(this.img,this.xIndex,this.yIndex,this.spw,this.sph,this.x,this.y,this.w,this.h); 
 
   };
   SpriteTiles=(img,xTiles,yTiles)=>{
@@ -115,7 +117,6 @@ SpriteAnime=(img,xIndex,yIndex)=>{
     };
  
 
- 
 
 
 

@@ -3,9 +3,11 @@ import Obj from './obj.js'
 import {canvas} from './obj.js'
 import {ctx} from './obj.js'
 
-import{mouseImg} from './Img.js'
-import { debugMode,mouse,click } from './controller.js'
+import{mouseImg,slimeImg,monitorImg} from './Img.js'
+import {debug, debugMode,mouse,click } from './controller.js'
 import col from './CollitionsObj.js'
+import{xIndex,yIndex,xIndexSlime,yIndexSlime}from './anima.js'
+
 
 
  
@@ -21,20 +23,13 @@ let rand= Math.floor((Math.random() * text.length) )
 
 
 
+let animeTest=new Obj(100,400,300,300);
+let slime=new Obj(Math.floor((Math.random() * canvas.width) ),Math.floor((Math.random() * canvas.height) ),64,64);
 
-let debug=new Obj(600,0,64,64);
+
 let mouseCollideBloco=new Obj(mouse.x,mouse.y,mouse.w,mouse.h);
 let bloco=new Obj(300,200,64,64),drag=false;
 
-
-///anima Sprite
-let xIndex=0;
-let yIndex=0;
-let animaSpd=8//tem que ser multiplos de 2
-setInterval(()=>xIndex+=64,1000/animaSpd);//a cada segundo pula 64 px na imagem, quatro frames na horizontal
-setInterval(()=>xIndex=0,4000/animaSpd);//quando chegar na ultima imagem volta pra primeira
-
-  
 
 
 //////GAME////
@@ -43,16 +38,18 @@ function game (){
 requestAnimationFrame(game,canvas);
 ctx.clearRect(0,0,canvas.width,canvas.height);
 
-
                     /////GAME UPDATE//////
-
 col();
 
-
-
                             ////DRAW/////
-                            
-bloco.Draw("#0E7C7B")
+                           
+animeTest.SpriteAnime(monitorImg,xIndex,yIndex,animeTest.w,animeTest.h)
+slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+128,slime.w,slime.h)
+
+
+/*
+bloco.Draw("#0E7C7B");
+
 
 
 //checa se click
@@ -63,11 +60,14 @@ if (mouseCollideBloco.collideBolean&&click){
 if (mouseCollideBloco.collideBolean&&click){
   bloco.x=mouse.x
   bloco.y=mouse.y
+
+  
+
  drag=true
 }else{drag=false}
 
 ///
-
+*/
 
                             /////Debug
 
@@ -76,6 +76,8 @@ if (debugMode){
 debug.hudMsg(debug.x,debug.y+16,"white","19px DePixel",`
 debugmode  ${debugMode}   
 click  ${click}   
+xIndex  ${xIndex}   
+xIndexSlime  ${xIndexSlime}   
 
 
 `)
@@ -84,16 +86,17 @@ click  ${click}
 
 
 
-txt.hudMsg(txt.x,txt.y,"#17BEBB","100px DePixel ",text[rand] )
+txt.hudMsg(txt.x,txt.y,"#17BEBB","40px DePixel ",text[rand],0.5 )
 
 
 
-if (click){mouse.SpriteAnime(mouseImg,0,yIndex+64)}else{mouse.SpriteAnime(mouseImg,0,yIndex)}
+if (click){mouse.SpriteAnime(mouseImg,0,yIndex+64,mouse.w,mouse.h)}else{mouse.SpriteAnime(mouseImg,0,yIndex,mouse.w,mouse.h)}
 
 
 };
 game();
 
+
 export{
-  mouseCollideBloco,mouse,bloco
+  mouseCollideBloco,mouse,bloco,animeTest,slime
 }

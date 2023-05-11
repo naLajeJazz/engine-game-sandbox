@@ -20,6 +20,7 @@ app.listen(process.env.PORT || 1011, function (erro) {
 
                   erro ?
                           console.log("opa aconteceu um erro!") :
-                          console.log("oba servidor rodando!");
+                          console.table(["oba servidor rodando!", "localhost:1011"]);
+                          
           
           });
