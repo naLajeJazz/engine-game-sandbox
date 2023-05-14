@@ -1,11 +1,11 @@
-import{animeTest,slime}from './script.js'
+import{monitor,slime}from './script.js'
 
 
 ///anima Sprite
 let xIndex=0;
 let yIndex=0;
 let animaSpd=4  //velocidade da animaçao
-setInterval(()=>xIndex+=animeTest.w,1000/animaSpd);//a cada segundo pula 64 px na imagem, quatro frames na horizontal
+setInterval(()=>xIndex+=monitor.w,1000/animaSpd);//a cada segundo pula 64 px na imagem, quatro frames na horizontal
 setInterval(()=>xIndex=0,4000/animaSpd);//quando chegar na ultima imagem volta pra primeira
 
 ///anima Sprite

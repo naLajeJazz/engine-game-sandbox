@@ -7,6 +7,8 @@ import{mouseImg,slimeImg,monitorImg} from './Img.js'
 import {debug, debugMode,mouse,click } from './controller.js'
 import col from './CollitionsObj.js'
 import{xIndex,yIndex,xIndexSlime,yIndexSlime}from './anima.js'
+import IntroScreen from './IntroScreen.js'
+import Debugar from './debug.js'
 
 
 
@@ -22,21 +24,28 @@ text=["Olá Rodrigo!","Oque vamos criar hoje?","Engine Game"];
 let rand= 0;
 setInterval(() => {rand=Math.floor((Math.random() * text.length) ) }, 5000);
 
-let animeTest=new Obj(canvas.width/2-150,canvas.height/2-150,300,300);
+let monitor=new Obj(canvas.width/2-150,canvas.height/2-150,300,300);
 
-let slime=new Obj(animeTest.x,animeTest.y-64,64,64);
+let slime=new Obj(monitor.x,monitor.y-64,64,64);
 
 
 let mouseCollideBloco=new Obj(mouse.x,mouse.y,mouse.w,mouse.h);
 
-let bloco=new Obj(300,200,64,64),drag=false;
+let blocos=[]
+let loteBlocos=3
+for(let i=0;i<loteBlocos;i++){
+ blocos[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height),64,64)
+};
+
+let bloco=new Obj(300,200,64,64);
+let drag=false;
 let orcs=[];
 let loteOrcs=800;
 for(let i=0;i<loteOrcs;i++){
-  orcs[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height),2,2,0.3);
+  orcs[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height),1,Math.floor(Math.random()*8),Math.floor(Math.random()*8));
   
 };
-
+let onOff=[false]
 
 //////GAME////
     
@@ -47,29 +56,27 @@ ctx.clearRect(0,0,canvas.width,canvas.height);
                     /////GAME UPDATE//////
 col();
 
-for(let i=0;i<loteOrcs;i++){
+
+                       
+/*
+for(let i=0;i<loteBlocos;i++){
  
-orcs[i].y+=orcs[i].spd
-if(orcs[i].y>canvas.height){
-  orcs[i].y=-32
+
+
+if(blocos[i].collideBolean&&click&&!onOff){
+  onOff=true
+ 
+}else if(blocos[i].collideBolean&&click&&onOff){
+  onOff=false
 }
- 
-};                         
-
-
-
-                            ////DRAW/////
-
-for(let i=0;i<loteOrcs;i++){
- 
-    orcs[i].Draw("#0E7C7B");
-   if(orcs[i].collideBolean){
-    orcs[i].Draw("orange");
-   }
+ if(onOff){
+  blocos[i].Draw("red")
+ }else{
+  blocos[i].Draw("green")
+ }
    
 };                         
-
-
+*/
 /*
 bloco.Draw("#0E7C7B");
 
@@ -96,22 +103,11 @@ if (mouseCollideBloco.collideBolean&&click){
 
 if (debugMode){
 
-                           
-  animeTest.SpriteAnime(monitorImg,xIndex,yIndex,animeTest.w,animeTest.h)
-  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+128,slime.w,slime.h)
-  txt.hudMsg(txt.x,txt.y,"#17BEBB","22px DePixel ",text[rand],0.7 )
-  
 
 
-/*
-debug.hudMsg(debug.x,debug.y+16,"white","19px DePixel",`
-debugmode  ${debugMode}   
-click  ${click}   
-${orcs[0].collideBolean}
-${orcs[1].collideBolean}
+IntroScreen();
+Debugar()
 
-`)
-*/
 }
 
 
@@ -131,9 +127,15 @@ export{
   mouseCollideBloco,
   mouse,
   bloco,
-  animeTest,
+  monitor,
   slime,
   orcs,
-  loteOrcs
+  loteOrcs,
+  blocos,
+  loteBlocos,
+  text,
+  txt,
+  rand,
+  onOff
   
 }
