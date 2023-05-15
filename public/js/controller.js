@@ -6,6 +6,7 @@ let debug=new Obj(600,0,64,64);
 let mouse=new Obj(200,300,64,64),
  debugMode=true,
  click=false;
+ let room=0
 
 
 
@@ -24,18 +25,19 @@ window.addEventListener("keyup",()=>{
 window.addEventListener("keydown",function(event){
 
   let k= event.key;
-             
-  if (k == "d" ){
-                         
- 
+   
+   if (k=="0"){
 
-  }else if(k =="a" ){
+    room=0
 
+  }else if
+ (k =="1" ){
+room=1
  
                         
-  }else if (k=="w"){
+  }else if (k=="2"){
 
-
+room=2
 
   }else if (k=="t"){
   debugMode=true           
@@ -66,6 +68,7 @@ window.addEventListener("keydown",function(event){
   else if (k=="z"){
        
   }
+
   },false);
 
 
@@ -110,6 +113,7 @@ export {
                   debug,
                   debugMode,
                   mouse,
-                  click
+                  click,
+                  room
         
 }
