@@ -2,10 +2,12 @@
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 
+
 let debug=new Obj(600,0,64,64);
 let mouse=new Obj(200,300,64,64),
  debugMode=true,
- click=false;
+ click=false,
+ dragable=false;
  let room=0
 
 
@@ -86,18 +88,19 @@ canvas.addEventListener('click',function(e){
   click=true
   setTimeout(() => {
     click=false
-  }, 10);
+  }, 12);
   
 },false);
 
 canvas.addEventListener('mousedown',function(){
-  click=true
- 
+  
+dragable=true
  
 },false);
 canvas.addEventListener('mouseup',function(){
   click=false
- 
+  dragable=false
+  
   
 },false);
 canvas.addEventListener('mouseover',function(){
@@ -114,6 +117,7 @@ export {
                   debugMode,
                   mouse,
                   click,
-                  room
+                  room,
+                  dragable
         
 }

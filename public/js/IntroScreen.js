@@ -32,7 +32,8 @@ const IntroScreen=()=>{
                                     monitor.SpriteAnime(monitorImg,xIndex,yIndex,monitor.w,monitor.h)
                                     slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+128,slime.w,slime.h)
                                     txt.hudMsg(txt.x,txt.y,"#17BEBB","22px DePixel ","Game Engine sandbox" )
-                                    txt.hudMsg(txt.x,txt.y+32,"#17BEBB","22px DePixel ","press '1' for drag and drop " )
+                                    txt.hudMsg(txt.x,txt.y+32,"#17BEBB","18px DePixel ","press '1' for drag and drop " )
+                                    txt.hudMsg(txt.x,txt.y+64,"#17BEBB","18px DePixel ","press '2' for onOff " )
                                                                         
                                                                       
 }

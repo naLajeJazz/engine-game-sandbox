@@ -1,4 +1,4 @@
-import{monitor,slime}from './script.js'
+import{monitor,slime}from './globalVar.js'
 
 
 ///anima Sprite

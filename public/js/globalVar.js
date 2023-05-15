@@ -8,7 +8,7 @@ canvas.height=screen.height+8;
 canvas.style.backgroundColor="black";
 ////Objetos////
 
-let txt=new Obj(canvas.width/2,canvas.height/2,800,800,0.5),
+let txt=new Obj(canvas.width/2,canvas.height/2-50,800,800,0.5),
 text=["Olá Rodrigo!","Oque vamos criar hoje?","Engine Game"];
 let rand= 0;
 setInterval(() => {rand=Math.floor((Math.random() * text.length) ) }, 5000);
@@ -20,11 +20,14 @@ let slime=new Obj(monitor.x,monitor.y-64,64,64);
 
 let mouseCollideBloco=new Obj(mouse.x,mouse.y,mouse.w,mouse.h);
 
-let blocos=[]
-let loteBlocos=3
+let blocos=[],onOffBtn=[]
+let loteBlocos=4
 for(let i=0;i<loteBlocos;i++){
- blocos[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height),64,64)
+ blocos[i]=new Obj(300,300,64,64);
+
+ onOffBtn[i]=false
 };
+
 
 let bloco=new Obj(300,200,64,64);
 
@@ -35,12 +38,10 @@ for(let i=0;i<loteOrcs;i++){
   
 };
 
-let onOff=false;
-let drag=false;
 
 
 
 
 export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
-loteBlocos,text,txt,rand,onOff,drag}
+loteBlocos,text,txt,rand,onOffBtn}
 
