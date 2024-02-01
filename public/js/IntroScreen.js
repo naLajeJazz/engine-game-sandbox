@@ -1,9 +1,8 @@
-import Obj from './obj.js'
 import {canvas} from './obj.js'
-import {ctx} from './obj.js'
 import { monitorImg,slimeImg } from "./Img.js";
-import { loteOrcs, orcs,monitor,slime,txt,text,rand } from "./script.js";
+import { loteOrcs, orcs,monitor,slime,txt} from "./script.js";
 import {xIndex,yIndex,xIndexSlime,yIndexSlime} from './anima.js'
+import { slimeDir } from './globalVar.js';
 
 
 const IntroScreen=()=>{
@@ -21,7 +20,7 @@ const IntroScreen=()=>{
                                                                       
                                                                           
                                     if(orcs[i].collideBolean){
-                                    orcs[i].hudMsg(orcs[i].x,orcs[i].y,"#FF99C8","14px DePixel ","♥");
+                                    orcs[i].hudMsg(orcs[i].x,orcs[i].y,"#FF99C8","14px DePixel ","X");
                                     }else{orcs[i].Draw("#A9DEF9");}
                                                                          
                                                                        
@@ -30,11 +29,24 @@ const IntroScreen=()=>{
                                                                       
                                                                                                  
                                     monitor.SpriteAnime(monitorImg,xIndex,yIndex,monitor.w,monitor.h)
-                                    slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+128,slime.w,slime.h)
+                                    
                                     txt.hudMsg(txt.x,txt.y,"#17BEBB","22px DePixel ","Game Engine sandbox" )
                                     txt.hudMsg(txt.x,txt.y+32,"#17BEBB","18px DePixel ","press '1' for drag and drop " )
                                     txt.hudMsg(txt.x,txt.y+64,"#17BEBB","18px DePixel ","press '2' for onOff " )
-                                                                        
+
+                                    
+                                    if(slimeDir==""){
+                                                      slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+128,slime.w,slime.h) 
+                                    }else
+                                    if(slimeDir=="d"){
+                                                      slime.x-=slime.spd
+                                                      slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime,slime.w,slime.h) 
+                                    }else if(slimeDir=="e"){
+                                                       slime.x+=slime.spd;
+                                                       slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h) 
+                                                      }
+
+                                 
                                                                       
 }
 export default IntroScreen

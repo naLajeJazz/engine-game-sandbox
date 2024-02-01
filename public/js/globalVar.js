@@ -1,33 +1,42 @@
 import Obj from './obj.js'
 import {canvas} from './obj.js'
-import {ctx} from './obj.js'
-import {debug, debugMode,mouse,click } from './controller.js'
+import {mouse} from './controller.js'
 
 canvas.width=screen.width;
 canvas.height=screen.height+8;
 canvas.style.backgroundColor="black";
+
 ////Objetos////
 
+//
 let txt=new Obj(canvas.width/2,canvas.height/2-50,800,800,0.5),
 text=["Olá Rodrigo!","Oque vamos criar hoje?","Engine Game"];
+//
+
 let rand= 0;
 setInterval(() => {rand=Math.floor((Math.random() * text.length) ) }, 5000);
 
 let monitor=new Obj(canvas.width/2-150,canvas.height/2-150,300,300);
 
-let slime=new Obj(monitor.x,monitor.y-64,64,64);
-
+//
+let slime=new Obj(monitor.x+1,monitor.y-64,64,64,0.5),slimeDir="";
+setInterval(() => {
+  slimeDir="e"
+}, 4000);
+setInterval(() => {
+  slimeDir="d"
+}, 8000);
+//
 
 let mouseCollideBloco=new Obj(mouse.x,mouse.y,mouse.w,mouse.h);
-
+//
 let blocos=[],onOffBtn=[]
 let loteBlocos=4
 for(let i=0;i<loteBlocos;i++){
  blocos[i]=new Obj(300,300,64,64);
-
  onOffBtn[i]=false
 };
-
+//
 
 let bloco=new Obj(300,200,64,64);
 
@@ -43,5 +52,5 @@ for(let i=0;i<loteOrcs;i++){
 
 
 export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
-loteBlocos,text,txt,rand,onOffBtn}
+loteBlocos,text,txt,rand,onOffBtn,slimeDir}
 

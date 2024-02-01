@@ -5,7 +5,7 @@ import {click} from './controller.js'
 
 const OnOff=()=>{
 
-  
+  //posiciona botoes
   blocos[0].x=400;
   blocos[1].x=500;
   blocos[2].x=600;
@@ -14,7 +14,7 @@ const OnOff=()=>{
   
  
 
-
+                                    ///interaçoes de cada botao separado
                                     if(blocos[0].collideBolean&&click&&!onOffBtn[0]){
                                       onOffBtn[0]=true
                                      

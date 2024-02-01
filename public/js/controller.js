@@ -3,9 +3,9 @@ import Obj from './obj.js'
 import {canvas} from './obj.js'
 
 
-let debug=new Obj(600,0,64,64);
+let debug=new Obj(800,0,64,64);
 let mouse=new Obj(200,300,64,64),
- debugMode=true,
+ debugMode=false,
  click=false,
  dragable=false;
  let room=0
@@ -46,8 +46,8 @@ room=2
   }else if (k=="y"){
   debugMode=false           
   }
-  else if (k=="f"){
-                
+  else if (k=="3"){
+        room=3        
   }
   else if (k=="g"){
                 
