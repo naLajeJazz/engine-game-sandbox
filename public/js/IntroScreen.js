@@ -1,8 +1,8 @@
 import {canvas} from './obj.js'
 import { monitorImg,slimeImg } from "./Img.js";
-import { loteOrcs, orcs,monitor,slime,txt} from "./script.js";
+
 import {xIndex,yIndex,xIndexSlime,yIndexSlime} from './anima.js'
-import { slimeDir } from './globalVar.js';
+import { slimeDir,loteOrcs, orcs,monitor,slime,txt } from './globalVar.js';
 
 
 const IntroScreen=()=>{
@@ -33,7 +33,7 @@ const IntroScreen=()=>{
                                     txt.hudMsg(txt.x,txt.y,"#17BEBB","22px DePixel ","Game Engine sandbox" )
                                     txt.hudMsg(txt.x,txt.y+32,"#17BEBB","18px DePixel ","press '1' for drag and drop " )
                                     txt.hudMsg(txt.x,txt.y+64,"#17BEBB","18px DePixel ","press '2' for onOff " )
-
+                                    txt.hudMsg(txt.x,txt.y+96,"#17BEBB","18px DePixel ","press '3' move player" )
                                     
                                     if(slimeDir==""){
                                                       slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+128,slime.w,slime.h) 

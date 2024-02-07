@@ -1,5 +1,5 @@
-import {mouseCollideBloco,bloco}from './globalVar.js'
-import {mouse,click,dragable} from './controller.js'
+import {mouseCollideBloco,bloco,mouse}from './globalVar.js'
+import {click,dragable} from './controller.js'
 import { canvas } from './obj.js';
 import Obj from './obj.js'
 let drag=false;

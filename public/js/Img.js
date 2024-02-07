@@ -11,10 +11,15 @@ slimeImg.setAttribute("src","./assets/slime.png");
 let monitorImg = document.createElement("IMG");
 monitorImg.setAttribute("src","./assets/monitor.png");
 
+let playerImg = document.createElement("IMG");
+playerImg.setAttribute("src","./assets/sp15.png");
+
+
 export {
                   mouseImg,
                   btnImg,
                   slimeImg,
-                  monitorImg
+                  monitorImg,
+                  playerImg
         
 }

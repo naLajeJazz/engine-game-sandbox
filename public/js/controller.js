@@ -1,10 +1,13 @@
 
+
+
+import {mouse,moveR,moveL,moveU,moveD } from './globalVar.js';
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 
 
-let debug=new Obj(800,0,64,64);
-let mouse=new Obj(200,300,64,64),
+let debug=new Obj(800,0,64,64),
+
  debugMode=false,
  click=false,
  dragable=false;
@@ -19,8 +22,11 @@ let mouse=new Obj(200,300,64,64),
 ////teclado
 
 window.addEventListener("keyup",()=>{
-               
-                
+
+  moveR[0]=false
+  moveL[0]=false
+  moveU[0]=false
+  moveD[0]=false
                
 },false);
 
@@ -47,19 +53,20 @@ room=2
   debugMode=false           
   }
   else if (k=="3"){
-        room=3        
+        room=3  
+        
   }
-  else if (k=="g"){
-                
+  else if (k=="d"){
+    moveR[0]=true
   }
-  else if (k=="e"){
-                  
+  else if (k=="a"){
+    moveL[0]=true     
   }
-  else if (k=="q"){
-               
+  else if (k=="w"){
+    moveU[0]=true      
   }
-  else if (k=="p"){
-                 
+  else if (k=="s"){
+    moveD[0]=true     
   }
   else if (k=="o"){
       
@@ -115,7 +122,7 @@ canvas.addEventListener('mouseover',function(){
 export {
                   debug,
                   debugMode,
-                  mouse,
+                
                   click,
                   room,
                   dragable

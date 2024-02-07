@@ -1,6 +1,8 @@
 
-import {blocos,onOffBtn}from './globalVar.js'
+import {blocos,onOffBtn,loteOrcs, orcs}from './globalVar.js'
 import {click} from './controller.js'
+import { canvas } from './obj.js';
+
     //posiciona botoes
     blocos[0].x=400;
     blocos[1].x=500;
@@ -11,7 +13,7 @@ import {click} from './controller.js'
 
 const OnOff=()=>{
 
-
+  
  
 
                                     ///interaçoes de cada botao separado
@@ -23,7 +25,7 @@ const OnOff=()=>{
                                     }
                                      if(onOffBtn[0]){
                                       blocos[0].Draw("red")
-                                      blocos[0].y++
+                                     
                                      }else{
                                       blocos[0].Draw("green")
                                      }
@@ -62,6 +64,29 @@ const OnOff=()=>{
                                       blocos[3].Draw("red")
                                      }else{
                                       blocos[3].Draw("green")
+                                     };
+
+                                     if(onOffBtn[0]&&onOffBtn[1]&&onOffBtn[2]&&onOffBtn[3]){
+                                      for(let i=0;i<loteOrcs;i++){
+ 
+                                        let randi=[];
+                                        randi[i]=Math.random()
+                                        orcs[i].y+=randi[i]
+                                                                           
+                                        if(orcs[i].y>canvas.height){
+                                        orcs[i].y=-32
+                                        }
+                                                                           
+                                                                                        
+                                        if(orcs[i].collideBolean){
+                                          orcs[i].hudMsg(orcs[i].x,orcs[i].y,"#FF99C8","14px DePixel ","♥");
+                                          }else{orcs[i].Draw("#A9DEF9");}
+                                                                                                      
+                                                                          
+                                        
+                                                                           
+                                                                             
+                                        };  
                                      }
                                         
 };    

@@ -1,4 +1,5 @@
-import{mouseCollideBloco,mouse,bloco,orcs,loteOrcs, monitor,blocos,loteBlocos}from './script.js'
+
+import{mouseCollideBloco,bloco,orcs,loteOrcs, monitor,blocos,loteBlocos,mouse}from './globalVar.js'
 
 
 

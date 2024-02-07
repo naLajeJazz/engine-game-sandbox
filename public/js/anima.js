@@ -1,4 +1,4 @@
-import{monitor,slime}from './globalVar.js'
+import{monitor,slime,player}from './globalVar.js'
 
 
 ///anima Sprite
@@ -15,9 +15,20 @@ let animaSpdSlime=8//tem que ser multiplos de 2
 setInterval(()=>xIndexSlime+=slime.w,1000/animaSpdSlime);//a cada segundo pula 64 px na imagem, quatro frames na horizontal
 setInterval(()=>xIndexSlime=0,8000/animaSpdSlime);//quando chegar na ultima imagem volta pra primeira
 
+
+
+///anima Sprite
+let xIndexPlayer=0;
+let yIndexPlayer=0;
+let animaSpdPlayer=4//tem que ser multiplos de 2
+setInterval(()=>xIndexPlayer+=player.w,1000/animaSpdPlayer);//a cada segundo pula 64 px na imagem, quatro frames na horizontal
+setInterval(()=>xIndexPlayer=0,4000/animaSpdPlayer);//quando chegar na ultima imagem volta pra primeira
+
 export{
                   xIndex,
                   yIndex,
                   xIndexSlime,
-                  yIndexSlime
+                  yIndexSlime,
+                  xIndexPlayer,
+                  yIndexPlayer
 }
