@@ -1,17 +1,17 @@
 
 import {blocos,onOffBtn}from './globalVar.js'
 import {click} from './controller.js'
-                 
+    //posiciona botoes
+    blocos[0].x=400;
+    blocos[1].x=500;
+    blocos[2].x=600;
+    blocos[3].x=700;
+    
+                   
 
 const OnOff=()=>{
 
-  //posiciona botoes
-  blocos[0].x=400;
-  blocos[1].x=500;
-  blocos[2].x=600;
-  blocos[3].x=700;
-  
-  
+
  
 
                                     ///interaçoes de cada botao separado

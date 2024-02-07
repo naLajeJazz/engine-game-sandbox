@@ -27,18 +27,20 @@ setInterval(() => {
   slimeDir="d"
 }, 8000);
 //
-
+let bloco=[]
 let mouseCollideBloco=new Obj(mouse.x,mouse.y,mouse.w,mouse.h);
 //
 let blocos=[],onOffBtn=[]
 let loteBlocos=4
 for(let i=0;i<loteBlocos;i++){
  blocos[i]=new Obj(300,300,64,64);
+ bloco[i]=new Obj(300,300,64,64);
  onOffBtn[i]=false
 };
+
 //
 
-let bloco=new Obj(300,200,64,64);
+
 
 let orcs=[];
 let loteOrcs=800;

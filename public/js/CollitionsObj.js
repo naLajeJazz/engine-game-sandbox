@@ -23,6 +23,7 @@ for(let i=0;i<loteOrcs;i++){
                               
 for(let i=0;i<loteBlocos;i++){
                   blocos[i].collide(mouse.x,mouse.y,mouse.w,mouse.h)
+                  bloco[i].collide(mouse.x,mouse.y,mouse.w,mouse.h)
                   
                 };
                               
