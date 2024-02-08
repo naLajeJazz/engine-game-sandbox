@@ -1,7 +1,7 @@
 
 
 
-import {mouse,moveR,moveL,moveU,moveD } from './globalVar.js';
+import {mouse,moveR,moveL,moveU,moveD, move } from './globalVar.js';
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 
@@ -27,6 +27,7 @@ window.addEventListener("keyup",()=>{
   moveL[0]=false
   moveU[0]=false
   moveD[0]=false
+  move[0]=false
                
 },false);
 
@@ -58,15 +59,19 @@ room=2
   }
   else if (k=="d"){
     moveR[0]=true
+    move[0]=true
   }
   else if (k=="a"){
-    moveL[0]=true     
+    moveL[0]=true 
+    move[0]=true    
   }
   else if (k=="w"){
-    moveU[0]=true      
+    moveU[0]=true 
+    move[0]=true     
   }
   else if (k=="s"){
-    moveD[0]=true     
+    moveD[0]=true 
+    move[0]=true    
   }
   else if (k=="o"){
       

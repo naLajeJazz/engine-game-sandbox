@@ -1,7 +1,7 @@
 
 import {debug,debugMode,click,room,dragable} from './controller.js'
 import { drag } from "./DragDrop.js"
-import { moveR, slimeDir} from './globalVar.js'
+import { move, moveR, slimeDir} from './globalVar.js'
 
 
 
@@ -14,8 +14,8 @@ const Debugar=()=>{
                   debugMode  ${debugMode}   
                   drag  ${drag}   
                   dragable  ${dragable}
-                  slimeDir  ${slimeDir} 
-                  moverR  ${moveR[0]}
+                  slimeDir  ${slimeDir}
+                  move    ${move[0]}
                 
                     
                   

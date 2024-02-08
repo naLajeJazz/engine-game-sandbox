@@ -59,11 +59,12 @@ let player = new Obj(canvas.width/2,canvas.height/2,64,64,3),
 moveR=[false],
 moveL=[false],
 moveU=[false],
-moveD=[false];
+moveD=[false],
+move=[false];
 
 
 
 
 export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
-loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,moveU,moveD}
+loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,moveU,moveD,move}
 

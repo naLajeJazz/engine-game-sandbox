@@ -11,7 +11,7 @@ import {mouseCollideBloco,bloco,monitor,slime,orcs,
 loteOrcs,blocos,loteBlocos,text,txt,rand,mouse}from './globalVar.js'
 import DragDrop from './DragDrop.js'
 import OnOff from './OnOff.js'
-import Novo from './nova.js'
+import MovePlayer from './move.js'
 
 
 //////GAME////
@@ -41,7 +41,7 @@ DragDrop();
 OnOff();
 
 }else if (room==3){
-Novo();
+MovePlayer();
 }
 
 if (dragable){mouse.SpriteAnime(mouseImg,0,yIndex+64,mouse.w,mouse.h)}else{mouse.SpriteAnime(mouseImg,0,yIndex,mouse.w,mouse.h)}

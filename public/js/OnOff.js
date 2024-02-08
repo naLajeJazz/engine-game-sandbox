@@ -78,9 +78,7 @@ const OnOff=()=>{
                                         }
                                                                            
                                                                                         
-                                        if(orcs[i].collideBolean){
-                                          orcs[i].hudMsg(orcs[i].x,orcs[i].y,"#FF99C8","14px DePixel ","♥");
-                                          }else{orcs[i].Draw("#A9DEF9");}
+                                        orcs[i].Draw("#A9DEF9")
                                                                                                       
                                                                           
                                         

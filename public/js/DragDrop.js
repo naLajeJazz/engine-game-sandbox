@@ -16,7 +16,7 @@ bloco[3].x=1000;
                   
                   
                   bloco[0].Draw("#0E7C7B");
-                  bloco[0].hudMsg(bloco[0].x,bloco[0].y,"red","19px DePixel",bloco[0].y)
+               
                   ///checa se drag
                   if (bloco[0].collideBolean&&dragable){
                     bloco[0].Draw("#17BEBB")
@@ -28,7 +28,7 @@ bloco[3].x=1000;
                   
                   }else{drag=false;
                     
-                    if(bloco[0].y < canvas.height-64){  bloco[0].y+=2}
+                    
                   }
                   
                 
@@ -44,7 +44,7 @@ bloco[3].x=1000;
                   drag=true
                   
                   }else{drag=false;
-                    if(bloco[1].y < canvas.height-64){  bloco[1].y+=2}}
+                    }
 
 
                   bloco[2].Draw("#0E7C7B");
@@ -58,7 +58,7 @@ bloco[3].x=1000;
                   drag=true
                   
                   }else{drag=false;
-                    if(bloco[2].y < canvas.height-64){  bloco[2].y+=2}}
+                    }
 
 
 
@@ -73,7 +73,7 @@ bloco[3].x=1000;
                   drag=true
                   
                   }else{drag=false;
-                    if(bloco[3].y < canvas.height-64){  bloco[3].y+=2}}
+                 }
 
                   
   }
