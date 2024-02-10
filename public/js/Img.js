@@ -15,7 +15,7 @@ let playerImg = document.createElement("IMG");
 playerImg.setAttribute("src","./assets/sp15.png");
 
 let player2Img = document.createElement("IMG");
-player2Img.setAttribute("src","./assets/sp8.png");
+player2Img.setAttribute("src","./assets/sp1.png");
 
 
 export {

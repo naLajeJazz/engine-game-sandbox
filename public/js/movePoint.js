@@ -8,13 +8,14 @@ import Obj from "./obj.js"
 import MovePlayer from "./move.js"
 import { room } from "./controller.js"
 
+import {canvas} from './obj.js'
 
   const MovePoint=()=>{
                    
-    //player2.SpriteAnime(player2Img,xIndexPlayer2,yIndexPlayer2+64*4,player2.w,player2.h)
+    player2.SpriteAnime(player2Img,xIndexPlayer2,yIndexPlayer2,player2.w,player2.h)
 
    
-point.Draw("red",0.5)
+
 
    
 
@@ -26,23 +27,30 @@ if(pointActive[0]&& moveToPoint[0]){
                  
                   point.x=mouse.x
                   point.y=mouse.y
+
+                
 }
 
 
-                  if(moveToPoint[0]){
+                  if(moveToPoint[0]&&pointCollidePlayer2.collideBolean==false){
 
                        
+                    point.Draw("6ad69d",0.5)
+                    point.DrawLine(point.x+point.w/2,point.y+point.h/2,
+player2.x+player2.w/2,player2.y+player2.h/2,"6ad69d",1,0.6)
+
+
                   if(player2.x<point.x){
                                      
                     player2.x+=player2.spd
-                    player2.SpriteAnime(player2Img,xIndexPlayer2,yIndexPlayer2+128,player2.w,player2.h)
+                   // player2.SpriteAnime(player2Img,xIndexPlayer2,yIndexPlayer2+128,player2.w,player2.h)
                     moveR2[0]=true
 
                      }
                      if(player2.x>point.x) {
                                       
                       player2.x-=player2.spd
-                     player2.SpriteAnime(player2Img,xIndexPlayer2,yIndexPlayer2+64,player2.w,player2.h)
+                    // player2.SpriteAnime(player2Img,xIndexPlayer2,yIndexPlayer2+64,player2.w,player2.h)
                       moveL2[0]=true
 
                   
@@ -50,7 +58,7 @@ if(pointActive[0]&& moveToPoint[0]){
                     if(player2.y>point.y){
                                       
                       player2.y-=player2.spd
-                      player2.SpriteAnime(player2Img,xIndexPlayer2,yIndexPlayer2+64*3,player2.w,player2.h)
+                     // player2.SpriteAnime(player2Img,xIndexPlayer2,yIndexPlayer2+64*3,player2.w,player2.h)
                       moveU2[0]=true;
 
                      
@@ -60,7 +68,7 @@ if(pointActive[0]&& moveToPoint[0]){
                      if(player2.y<point.y) {
                                       
                       player2.y+=player2.spd
-                      player2.SpriteAnime(player2Img,xIndexPlayer2,yIndexPlayer2,player2.w,player2.h)
+                      //player2.SpriteAnime(player2Img,xIndexPlayer2,yIndexPlayer2,player2.w,player2.h)
                       moveD2[0]=true;
 
                      
@@ -71,7 +79,7 @@ if(pointActive[0]&& moveToPoint[0]){
 
                   
                   if(pointCollidePlayer2.collideBolean){
-                        player2.SpriteAnime(player2Img,xIndexPlayer2,yIndexPlayer2+64*4,player2.w,player2.h)
+                       // player2.SpriteAnime(player2Img,xIndexPlayer2,yIndexPlayer2+64*4,player2.w,player2.h)
 
                     /*
                     moveR2[0]=false
@@ -100,8 +108,7 @@ if(pointActive[0]&& moveToPoint[0]){
                   */
                   
                 
-point.DrawLine(point.x+point.w/2,point.y+point.h/2,
-player2.x+player2.w/2,player2.y+player2.h/2,"red",1,0.6)
+
 
                   
   }
