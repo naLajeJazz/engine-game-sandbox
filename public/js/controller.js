@@ -1,7 +1,7 @@
 
 
 
-import {mouse,moveR,moveL,moveU,moveD, move } from './globalVar.js';
+import {mouse,moveR,moveL,moveU,moveD, move, pointActive, moveToPoint } from './globalVar.js';
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 
@@ -48,7 +48,12 @@ room=1
 
 room=2
 
-  }else if (k=="t"){
+  }
+  else if (k=="4"){
+
+    room=4
+    
+      }else if (k=="t"){
   debugMode=true           
   }else if (k=="y"){
   debugMode=false           
@@ -106,12 +111,16 @@ canvas.addEventListener('click',function(e){
 
 canvas.addEventListener('mousedown',function(){
   
-dragable=true
+dragable=true;
+pointActive[0]=true;
+moveToPoint[0]=true;
+
  
 },false);
 canvas.addEventListener('mouseup',function(){
-  click=false
-  dragable=false
+  click=false;
+  dragable=false;
+  pointActive[0]=false;
   
   
 },false);

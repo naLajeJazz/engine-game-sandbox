@@ -12,6 +12,7 @@ loteOrcs,blocos,loteBlocos,text,txt,rand,mouse}from './globalVar.js'
 import DragDrop from './DragDrop.js'
 import OnOff from './OnOff.js'
 import MovePlayer from './move.js'
+import MovePoint from './movePoint.js'
 
 
 //////GAME////
@@ -43,6 +44,9 @@ OnOff();
 }else if (room==3){
 MovePlayer();
 }
+else if (room==4){
+  MovePoint();
+  }
 
 if (dragable){mouse.SpriteAnime(mouseImg,0,yIndex+64,mouse.w,mouse.h)}else{mouse.SpriteAnime(mouseImg,0,yIndex,mouse.w,mouse.h)}
 

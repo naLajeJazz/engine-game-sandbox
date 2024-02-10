@@ -63,8 +63,27 @@ moveD=[false],
 move=[false];
 
 
+///point  
+let point=new Obj(player.x,player.y,32,32),
+    pointCollidePlayer=new Obj(point.x,point.y,point.w,point.h),
+    pointActive=[false],
+    moveToPoint=[false];
 
 
+    let player2 = new Obj(canvas.width/2,canvas.height/2,64,64,1.5),
+    moveR2=[false],
+    moveL2=[false],
+    moveU2=[false],
+    moveD2=[false],
+    move2=[false],
+    pointCollidePlayer2=new Obj(point.x,point.y,point.w,point.h);
+
+    
 export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
-loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,moveU,moveD,move}
+loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,
+moveU,moveD,move,pointCollidePlayer,pointActive,point,moveToPoint,
+player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2
+
+
+}
 

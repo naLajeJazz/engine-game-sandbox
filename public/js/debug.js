@@ -1,9 +1,10 @@
 
 import {debug,debugMode,click,room,dragable} from './controller.js'
 import { drag } from "./DragDrop.js"
-import { move, moveR, slimeDir} from './globalVar.js'
+import { move, moveR, moveToPoint, slimeDir,pointCollidePlayer2} from './globalVar.js'
+import Obj from './obj.js'
 
-
+moveToPoint
 
 
 
@@ -16,6 +17,8 @@ const Debugar=()=>{
                   dragable  ${dragable}
                   slimeDir  ${slimeDir}
                   move    ${move[0]}
+                  moveToPoint    ${moveToPoint[0]}
+                  pointCollidePlayer2    ${pointCollidePlayer2.collideBolean}
                 
                     
                   

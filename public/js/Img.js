@@ -14,12 +14,16 @@ monitorImg.setAttribute("src","./assets/monitor.png");
 let playerImg = document.createElement("IMG");
 playerImg.setAttribute("src","./assets/sp15.png");
 
+let player2Img = document.createElement("IMG");
+player2Img.setAttribute("src","./assets/sp8.png");
+
 
 export {
                   mouseImg,
                   btnImg,
                   slimeImg,
                   monitorImg,
-                  playerImg
+                  playerImg,
+                  player2Img
         
 }
