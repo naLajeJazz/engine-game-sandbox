@@ -35,9 +35,9 @@ if(pointActive[0]&& moveToPoint[0]){
                   if(moveToPoint[0]&&pointCollidePlayer2.collideBolean==false){
 
                        
-                    point.Draw("6ad69d",0.5)
+                    point.Draw("#A1A61B",0.5)
                     point.DrawLine(point.x+point.w/2,point.y+point.h/2,
-player2.x+player2.w/2,player2.y+player2.h/2,"6ad69d",1,0.6)
+player2.x+player2.w/2,player2.y+player2.h/2,"#A1A61B",1,0.2)
 
 
                   if(player2.x<point.x){

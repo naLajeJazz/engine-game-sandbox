@@ -64,7 +64,7 @@ move=[false];
 
 
 ///point  
-let point=new Obj(player.x,player.y,32,32),
+let point=new Obj(player.x,player.y,8,8),
     pointCollidePlayer=new Obj(point.x,point.y,point.w,point.h),
     pointActive=[false],
     moveToPoint=[false];

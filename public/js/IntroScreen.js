@@ -30,11 +30,11 @@ const IntroScreen=()=>{
                                                                                                  
                                     monitor.SpriteAnime(monitorImg,xIndex,yIndex,monitor.w,monitor.h)
                                     
-                                    txt.hudMsg(txt.x,txt.y,"#17BEBB","22px DePixel ","Game Engine sandbox" )
-                                    txt.hudMsg(txt.x,txt.y+32,"#17BEBB","18px DePixel ","press '1' for drag and drop " )
-                                    txt.hudMsg(txt.x,txt.y+64,"#17BEBB","18px DePixel ","press '2' for onOff " )
-                                    txt.hudMsg(txt.x,txt.y+96,"#17BEBB","18px DePixel ","press '3' move player" )
-                                    
+                                    txt.hudMsg(txt.x,txt.y,"#A1A61B","28px DePixel ","Game Engine sandbox" )
+                                    txt.hudMsg(txt.x,txt.y+32,"#A1A61B","20px DePixel ","press '1' for drag and drop " )
+                                    txt.hudMsg(txt.x,txt.y+64,"#A1A61B","20px DePixel ","press '2' for onOff " )
+                                    txt.hudMsg(txt.x,txt.y+96,"#A1A61B","20px DePixel ","press '3' move player" )
+                                    txt.hudMsg(txt.x,txt.y+128,"#A1A61B","20px DePixel ","press '4' move to point" )
                                     if(slimeDir==""){
                                                       slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+128,slime.w,slime.h) 
                                     }else
