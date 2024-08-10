@@ -9,14 +9,15 @@ moveToPoint
 
 
 const Debugar=()=>{
-                  debug.hudMsg(debug.x+400,debug.y+16,"red","24px DePixel",` 
+                  debug.hudMsg(debug.x,debug.y+16,"red","24px DePixel",` 
+                  
+                  
+                  player.x ${player.x}
+                  player.y ${player.y}
+                  boxMask.x ${boxMask.x}
+                  boxMask.y ${boxMask.y}
                   
                   move ${move[0]}
-                  moveR ${moveR[0]}
-                  moveL ${moveL[0]}
-                  moveU ${moveU[0]}
-                  moveD ${moveD[0]}
-                  player.spd ${player.spd}
                   
                 `)
                 debug.hudMsg(debug.x+200,debug.y+42,"green","24px DePixel",`

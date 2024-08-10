@@ -73,7 +73,9 @@ moveL=[false],
 moveU=[false],
 moveD=[false],
 move=[false],
-playerMask=new Obj(player.x,player.y,24,16);
+playerMask=new Obj(player.x,player.y,24,16),
+roupa= new Obj(player.x,player.y,player.w,player.h),
+pants= new Obj(player.x,player.y,player.w,player.h);
 
 
 
@@ -104,7 +106,8 @@ export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
 loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,
 moveU,moveD,move,pointCollidePlayer,pointActive,point,moveToPoint,
 player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,box,
-boxMask,playerMask,boxMaskD,boxMaskL,boxMaskR,boxMaskU,grass,ground,loteGrround,dirT,lotedirt
+boxMask,playerMask,boxMaskD,boxMaskL,boxMaskR,boxMaskU,grass,ground,
+loteGrround,dirT,lotedirt,roupa,pants
 
 
 }

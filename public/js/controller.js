@@ -6,7 +6,7 @@ import Obj from './obj.js'
 import {canvas} from './obj.js'
 
 
-let debug=new Obj(0,0,16,16),
+let debug=new Obj(0,0,0,0),
 
  debugMode=false,
  click=false,
@@ -62,6 +62,10 @@ room=2
         room=3  
         
   }
+  else if (k=="5"){
+    room=5  
+    
+}
   else if (k=="d"){
     moveR[0]=true
     move[0]=true

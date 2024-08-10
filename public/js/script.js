@@ -50,6 +50,10 @@ else if (room==4){
   canvas.style.backgroundColor="#222601";
   MovePoint();
   }
+  else if (room==5){
+    canvas.style.backgroundColor="black";
+    
+    }
 
 if (dragable){mouse.SpriteAnime(mouseImg,0,yIndex+64,mouse.w,mouse.h)}else{mouse.SpriteAnime(mouseImg,0,yIndex,mouse.w,mouse.h)}
 

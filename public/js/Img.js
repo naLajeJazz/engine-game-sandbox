@@ -23,6 +23,14 @@ grassImg.setAttribute("src","./assets/grass.png");
 let dirtImg = document.createElement("IMG");
 dirtImg.setAttribute("src","./assets/dirt.png");
 
+let roupaImg = document.createElement("IMG");
+roupaImg.setAttribute("src","./assets/spTshirt.png");
+
+let pantsImg = document.createElement("IMG");
+pantsImg.setAttribute("src","./assets/spPants.png");
+
+let hairImg = document.createElement("IMG");
+hairImg.setAttribute("src","./assets/spHair.png");
 
 export {
                   mouseImg,
@@ -31,6 +39,8 @@ export {
                   monitorImg,
                   playerImg,
                   player2Img,
-                  grassImg,dirtImg
+                  grassImg,dirtImg,
+                  roupaImg,pantsImg,
+                  hairImg
         
 }
