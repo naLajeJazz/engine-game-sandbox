@@ -11,6 +11,8 @@ canvas.style.backgroundColor="black";
 
 let mouse=new Obj(200,300,64,64);
 
+
+
 //
 let txt=new Obj(canvas.width/2,canvas.height/2-50,800,800,0.5),
 text=["Olá Rodrigo!","Oque vamos criar hoje?","Engine Game"];
@@ -41,9 +43,19 @@ for(let i=0;i<loteBlocos;i++){
  onOffBtn[i]=false
 };
 
+let ground=[]
+let grass=new Obj(200,200),
+loteGrround=40
+for(let i=0;i<loteGrround;i++){
+ ground[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height))
+ };
 
-
-
+ let dirT=[]
+ 
+ let lotedirt=200
+ for(let i=0;i<lotedirt;i++){
+  dirT[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height))
+  };
 //
 
 
@@ -60,7 +72,9 @@ moveR=[false],
 moveL=[false],
 moveU=[false],
 moveD=[false],
-move=[false];
+move=[false],
+playerMask=new Obj(player.x,player.y,24,16);
+
 
 
 ///point  
@@ -79,10 +93,18 @@ let point=new Obj(player.x,player.y,8,8),
     pointCollidePlayer2=new Obj(point.x,point.y,point.w,point.h);
 
     
+let box= new Obj(500,300,64,64),
+boxMask=new Obj(box.x,box.y,64,64),
+boxMaskR=new Obj(box.x,box.y,64,64),
+boxMaskL=new Obj(box.x,box.y,64,64),
+boxMaskU=new Obj(box.x,box.y,64,64),
+boxMaskD=new Obj(box.x,box.y,64,64);
+
 export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
 loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,
 moveU,moveD,move,pointCollidePlayer,pointActive,point,moveToPoint,
-player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2
+player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,box,
+boxMask,playerMask,boxMaskD,boxMaskL,boxMaskR,boxMaskU,grass,ground,loteGrround,dirT,lotedirt
 
 
 }

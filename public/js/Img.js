@@ -17,6 +17,12 @@ playerImg.setAttribute("src","./assets/sp15.png");
 let player2Img = document.createElement("IMG");
 player2Img.setAttribute("src","./assets/sp1.png");
 
+let grassImg = document.createElement("IMG");
+grassImg.setAttribute("src","./assets/grass.png");
+
+let dirtImg = document.createElement("IMG");
+dirtImg.setAttribute("src","./assets/dirt.png");
+
 
 export {
                   mouseImg,
@@ -24,6 +30,7 @@ export {
                   slimeImg,
                   monitorImg,
                   playerImg,
-                  player2Img
+                  player2Img,
+                  grassImg,dirtImg
         
 }
