@@ -1,7 +1,7 @@
 
 import {debug,debugMode,click,room,dragable} from './controller.js'
 import { drag } from "./DragDrop.js"
-import { move, moveR, moveToPoint, slimeDir,pointCollidePlayer2,player,boxMask, playerMask, boxMaskR, boxMaskL, moveL, moveU, moveD} from './globalVar.js'
+import { move, moveR, moveToPoint, slimeDir,pointCollidePlayer2,player,boxMask, playerMask, boxMaskR, boxMaskL, moveL, moveU, moveD, boxMaskU, boxMaskD} from './globalVar.js'
 import Obj from './obj.js'
 
 
@@ -17,8 +17,11 @@ const Debugar=()=>{
                   player.spd ${player.spd}
 
                   `)
-                debug.hudMsg(debug.x-100,debug.y+42,"red","20px DePixel",`
-                  
+                debug.hudMsg(debug.x-100,debug.y+42,"green","20px DePixel",`
+                  boxMaskL.collideBolean ${boxMaskL.collideBolean}
+                  boxMaskR.collideBolean ${boxMaskR.collideBolean}
+                  boxMaskU.collideBolean ${boxMaskU.collideBolean}
+                  boxMaskD.collideBolean ${boxMaskD.collideBolean}
                   
                   `)
 }

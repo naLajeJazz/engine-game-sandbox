@@ -72,7 +72,7 @@ for(let i=0;i<loteOrcs;i++){
   
 };
 
-let player = new Obj(200,300,64,64,3),
+let player = new Obj(0,0,64,64,3),
 moveR=[false],
 moveL=[false],
 moveU=[false],
@@ -100,12 +100,12 @@ let point=new Obj(player.x,player.y,8,8),
     pointCollidePlayer2=new Obj(point.x,point.y,point.w,point.h);
 
     
-let box= new Obj(500,300,64,64),
+let box= new Obj(300,300,128,128),
 boxMask=new Obj(box.x,box.y,64,64),
-boxMaskR=new Obj(box.x+box.w-box.w/4,box.y,box.w/4,box.h),
-boxMaskL=new Obj(box.x,box.y,box.w/4,box.h),
-boxMaskU=new Obj(box.x,box.y,box.w,box.h/4),
-boxMaskD=new Obj(box.x,box.y+48,box.w,box.h/4);
+boxMaskR=new Obj(box.x+box.w+box.w/32,box.y,box.w/box.w,box.h),
+boxMaskL=new Obj(box.x-box.w/32,box.y,box.w/box.w,box.h),
+boxMaskU=new Obj(box.x,box.y-box.h/32,box.w,box.h/box.h),
+boxMaskD=new Obj(box.x,box.y+box.h+box.h/32,box.w,box.h/box.h);
 
 
 

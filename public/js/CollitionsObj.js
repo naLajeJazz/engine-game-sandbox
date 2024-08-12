@@ -29,9 +29,19 @@ boxMask.y=box.y;
 playerMask.x=player.x;
 playerMask.y=player.y;
 
+/*
+  boxMaskR.x=box.x
+  boxMaskR.y=box.y
 
+  boxMaskL.x=box.x
+  boxMaskL.y=box.y
 
-                                    
+  boxMaskU.x=box.x
+  boxMaskU.y=box.y
+
+  boxMaskD.x=box.x
+  boxMaskD.y=box.y
+   */                                 
 
 
 ///checa as colisoes das masks
@@ -46,10 +56,10 @@ pointCollidePlayer2.collide(player2.x,player2.y,player2.w,player2.h);
 playerMask.collide(boxMask.x,boxMask.y,boxMask.w,boxMask.h);
 //playerMask.collide(boxMaskL.x,boxMaskL.y,boxMaskL.w,boxMaskL.h);
 
-//boxMaskR.collide(playerMask.x,playerMask.y,playerMask.w,playerMask.h);
-//boxMaskL.collide(playerMask.x,playerMask.y,playerMask.w,playerMask.h);
-//boxMaskD.collide(playerMask.x,playerMask.y,playerMask.w,playerMask.h);
-//boxMaskU.collide(playerMask.x,playerMask.y,playerMask.w,playerMask.h);
+boxMaskR.collide(playerMask.x,playerMask.y,playerMask.w,playerMask.h);
+boxMaskL.collide(playerMask.x,playerMask.y,playerMask.w,playerMask.h);
+boxMaskD.collide(playerMask.x,playerMask.y,playerMask.w,playerMask.h);
+boxMaskU.collide(playerMask.x,playerMask.y,playerMask.w,playerMask.h);
 
 
 

@@ -22,7 +22,7 @@ import Obj from "./obj.js"
         };  
 */
 
-       // AnimaSp()
+        AnimaSp()
    
      // boxMask.DrawRect("blue",1)
       boxMaskR.DrawRect("green",1)
@@ -33,10 +33,10 @@ import Obj from "./obj.js"
         playerMask.DrawRect("orange",1)
         box.DrawRect("red",1)
     
-        if(moveR[0]){ player.x+=player.spd}
-        if(moveL[0]){ player.x-=player.spd}
-        if(moveD[0]){ player.y+=player.spd}
-        if(moveU[0]){ player.y-=player.spd}
+        if(moveR[0]&&!boxMaskL.collideBolean){ player.x+=player.spd}
+        if(moveL[0]&&!boxMaskR.collideBolean){ player.x-=player.spd}
+        if(moveD[0]&&!boxMaskU.collideBolean){ player.y+=player.spd}
+        if(moveU[0]&&!boxMaskD.collideBolean){ player.y-=player.spd}
       
       
       
