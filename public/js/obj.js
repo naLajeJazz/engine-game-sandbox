@@ -90,6 +90,14 @@ if(this.x+this.w<=this.hitX||this.x>=this.hitX){
   this.collideBoleanR=false
 }else{this.collideBoleanR=true;} 
 
+if(this.y>=this.hitY+this.hitH||this.y+this.h<=this.hitY){
+  this.collideBoleanU=false
+}else{this.collideBoleanU=true;} 
+
+if(this.y+this.h<=this.hitY||this.y>=this.hitY+this.hitH){
+  this.collideBoleanD=false
+}else{this.collideBoleanD=true;} 
+
 
 
 }; 
@@ -102,7 +110,7 @@ ctx.save()
 ctx.globalAlpha = alpha;
 ctx.font = fntSizefont;
 ctx.fillStyle = msgColor;
-ctx.textAlign = "";
+ctx.textAlign = "start";
 ctx.fillText(msg, this.msgX, this.msgY);
 ctx.restore()
 }

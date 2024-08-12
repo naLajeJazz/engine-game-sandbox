@@ -9,25 +9,16 @@ moveToPoint
 
 
 const Debugar=()=>{
-                  debug.hudMsg(debug.x,debug.y+16,"red","24px DePixel",` 
-                  
-                  
+                  debug.hudMsg(debug.x,debug.y+16,"red","20px DePixel",` 
                   player.x ${player.x}
                   player.y ${player.y}
-                  boxMask.x ${boxMask.x}
-                  boxMask.y ${boxMask.y}
-                  
-                  move ${move[0]}
-                  
-                `)
-                debug.hudMsg(debug.x+200,debug.y+42,"green","24px DePixel",`
-                 
+                  boxMask.x ${boxMask.x+boxMask.w}
+                  boxMask.y ${boxMask.y} move ${move[0]}`)
+                debug.hudMsg(debug.x-100,debug.y+42,"red","20px DePixel",`
                   playerMask.collideBolean ${playerMask.collideBolean} 
-                  boxMaskR ${boxMaskR.collideBolean} 
-                  boxMaskL ${boxMaskL.collideBolean} 
                   collideBoleanR ${playerMask.collideBoleanR} 
-                  collideBoleanL ${playerMask.collideBoleanL} 
-                    
-                  `)
+                  collideBoleanL ${playerMask.collideBoleanL}
+                  collideBoleanU ${playerMask.collideBoleanU}
+                  collideBoleanD ${playerMask.collideBoleanD}`)
 }
 export default Debugar
