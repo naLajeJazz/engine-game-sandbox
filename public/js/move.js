@@ -5,12 +5,15 @@ import { dirtImg, grassImg, hairImg, pantsImg, playerImg, roupaImg } from "./Img
 import Obj from "./obj.js"
 
 
+//localStorage.setItem('testi','testivalue')
+//const testivalue=localStorage.getItem('testi')
 
-  
+
+
+
+
+
   const MovePlayer=()=>{
-
-   
-   
 
 
     for(let i=0;i<loteGrround;i++){                                               
@@ -61,6 +64,7 @@ import Obj from "./obj.js"
   player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
   player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
   player.SpriteAnime(pantsImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
+  player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
 }else
 if (moveL[0]&&moveU[0]){
   player.spd=2
@@ -69,6 +73,7 @@ if (moveL[0]&&moveU[0]){
   player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
   player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
   player.SpriteAnime(pantsImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
+  player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
 }else
 if (moveL[0]&&moveD[0]){
   player.spd=2
@@ -77,6 +82,7 @@ if (moveL[0]&&moveD[0]){
   player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
   player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
   player.SpriteAnime(pantsImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
+  player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
 }else
 
     if (moveR[0]&&!playerMask.collideBoleanR){
@@ -85,6 +91,7 @@ if (moveL[0]&&moveD[0]){
       player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+128,player.w,player.h)
       player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer+128,player.w,player.h)
       player.SpriteAnime(pantsImg,xIndexPlayer,yIndexPlayer+128,player.w,player.h)
+      player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer+128,player.w,player.h)
       
     }else
     if(moveL[0]&&!playerMask.collideBoleanL){
@@ -92,12 +99,14 @@ if (moveL[0]&&moveD[0]){
       player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+64,player.w,player.h)
       player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer+64,player.w,player.h)
       player.SpriteAnime(pantsImg,xIndexPlayer,yIndexPlayer+64,player.w,player.h)
+      player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer+64,player.w,player.h)
     }else
     if (moveU[0]){
       player.y-=player.spd
       player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
       player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
       player.SpriteAnime(pantsImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
+      player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
     }else
     if(moveD[0]){
       player.y+=player.spd

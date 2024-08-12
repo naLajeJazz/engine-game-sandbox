@@ -14,15 +14,15 @@ import OnOff from './OnOff.js'
 import MovePlayer from './move.js'
 import MovePoint from './movePoint.js'
 
-
 //////GAME////
-    
+
+
 function game (){
 requestAnimationFrame(game,canvas);
 ctx.clearRect(0,0,canvas.width,canvas.height);
 
                     /////GAME UPDATE//////
-                   
+                            
 col();
 
 if(debugMode){
@@ -44,6 +44,8 @@ OnOff();
 
 }else if (room==3){
   canvas.style.backgroundColor="#384001";
+
+  
 MovePlayer();
 }
 else if (room==4){

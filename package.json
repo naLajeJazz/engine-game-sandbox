@@ -12,6 +12,8 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.19.2",
-    "nodemon": "^2.0.22"
+    "node-localstorage": "^3.0.5",
+    "nodemon": "^2.0.22",
+    "sqlite3": "^5.1.7"
   }
 }

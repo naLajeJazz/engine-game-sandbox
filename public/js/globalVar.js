@@ -2,9 +2,14 @@ import Obj from './obj.js'
 import {canvas} from './obj.js'
 
 
+
 canvas.width=screen.width;
 canvas.height=screen.height+8;
 canvas.style.backgroundColor="black";
+
+
+
+
 
 ////Objetos////
 
@@ -67,7 +72,7 @@ for(let i=0;i<loteOrcs;i++){
   
 };
 
-let player = new Obj(canvas.width/2,canvas.height/2,64,64,3),
+let player = new Obj(0,0,64,64,3),
 moveR=[false],
 moveL=[false],
 moveU=[false],
@@ -101,6 +106,22 @@ boxMaskR=new Obj(box.x,box.y,64,64),
 boxMaskL=new Obj(box.x,box.y,64,64),
 boxMaskU=new Obj(box.x,box.y,64,64),
 boxMaskD=new Obj(box.x,box.y,64,64);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
 loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,
