@@ -72,13 +72,13 @@ for(let i=0;i<loteOrcs;i++){
   
 };
 
-let player = new Obj(0,0,64,64,3),
+let player = new Obj(200,300,64,64,3),
 moveR=[false],
 moveL=[false],
 moveU=[false],
 moveD=[false],
 move=[false],
-playerMask=new Obj(player.x,player.y,24,16),
+playerMask=new Obj(player.x,player.y,player.w,player.h),
 roupa= new Obj(player.x,player.y,player.w,player.h),
 pants= new Obj(player.x,player.y,player.w,player.h);
 
@@ -102,10 +102,10 @@ let point=new Obj(player.x,player.y,8,8),
     
 let box= new Obj(500,300,64,64),
 boxMask=new Obj(box.x,box.y,64,64),
-boxMaskR=new Obj(box.x,box.y,64,64),
-boxMaskL=new Obj(box.x,box.y,64,64),
-boxMaskU=new Obj(box.x,box.y,64,64),
-boxMaskD=new Obj(box.x,box.y,64,64);
+boxMaskR=new Obj(box.x+box.w-box.w/4,box.y,box.w/4,box.h),
+boxMaskL=new Obj(box.x,box.y,box.w/4,box.h),
+boxMaskU=new Obj(box.x,box.y,box.w,box.h/4),
+boxMaskD=new Obj(box.x,box.y+48,box.w,box.h/4);
 
 
 

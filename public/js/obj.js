@@ -81,22 +81,6 @@ export default class Obj {
 if(this.x<=this.hitX+this.hitW&&this.x+this.w>=this.hitX&&this.y+this.h>=this.hitY&&this.y<=this.hitY+this.hitH)
 {this.collideBolean=true}else{this.collideBolean=false}
 
-if(this.x>=this.hitX+this.hitW||this.x<=this.hitX){
-  this.collideBoleanL=false
-  
-}else{this.collideBoleanL=true;} 
-
-if(this.x+this.w<=this.hitX||this.x>=this.hitX){
-  this.collideBoleanR=false
-}else{this.collideBoleanR=true;} 
-
-if(this.y>=this.hitY+this.hitH||this.y+this.h<=this.hitY){
-  this.collideBoleanU=false
-}else{this.collideBoleanU=true;} 
-
-if(this.y+this.h<=this.hitY||this.y>=this.hitY+this.hitH){
-  this.collideBoleanD=false
-}else{this.collideBoleanD=true;} 
 
 
 

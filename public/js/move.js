@@ -12,7 +12,7 @@ import Obj from "./obj.js"
 
   const MovePlayer=()=>{
 
-
+/*
     for(let i=0;i<loteGrround;i++){                                               
       ground[i].Sprite(grassImg,64,64)
       };  
@@ -20,26 +20,32 @@ import Obj from "./obj.js"
       for(let i=0;i<lotedirt;i++){                                               
         dirT[i].Sprite(dirtImg,64,64)
         };  
+*/
 
-
-        //AnimaSp()
+       // AnimaSp()
    
-      boxMask.DrawRect("blue",1)
-     // boxMaskR.DrawRect("olive",1)
-     // boxMaskL.DrawRect("red",1)
-     // boxMaskD.DrawRect("blue",1)
-     // boxMaskU.DrawRect("yellow",1)
-      playerMask.DrawRect("orange",1)
+     // boxMask.DrawRect("blue",1)
+      boxMaskR.DrawRect("green",1)
+      boxMaskL.DrawRect("blue",1)
+      boxMaskD.DrawRect("purple",1)
+      boxMaskU.DrawRect("yellow",1)
 
-     
- 
-
+        playerMask.DrawRect("orange",1)
+        box.DrawRect("red",1)
     
-   
+        if(moveR[0]){ player.x+=player.spd}
+        if(moveL[0]){ player.x-=player.spd}
+        if(moveD[0]){ player.y+=player.spd}
+        if(moveU[0]){ player.y-=player.spd}
+      
+      
+      
+      
 
 
+
    
-    
+    /*
 
 
     if (moveR[0]&&moveU[0]){
@@ -70,16 +76,19 @@ if (moveL[0]&&moveD[0]){
 
 }else
 
-    if (moveR[0]&&!playerMask.collideBoleanR){
+    if (moveR[0]&&playerMask.collideBolean){
       
-      player.x+=player.spd
+      player.spd=0
+      //
       
       
-    }else
-    if(moveL[0]&&!playerMask.collideBoleanL){
-      player.x-=player.spd
+    }else if(moveR[0]&&!playerMask.collideBolean){player.x+=player.spd}else
+    if(moveL[0]&&playerMask.collideBolean){
+      player.spd=0
       
-    }else
+      
+    }else if(moveL[0]&&!playerMask.collideBolean){player.x-=player.spd}
+   
     if (moveU[0]){
       player.y-=player.spd
  
@@ -89,7 +98,7 @@ if (moveL[0]&&moveD[0]){
       
     } 
    
-  
+ */
 
 
     if(!move[0]){

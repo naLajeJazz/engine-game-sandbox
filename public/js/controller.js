@@ -9,7 +9,7 @@ import {canvas} from './obj.js'
 
 let debug=new Obj(0,0,0,0),
 
- debugMode=false,
+ debugMode=true,
  click=false,
  dragable=false;
  let room=3
