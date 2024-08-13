@@ -2,17 +2,10 @@ import {mouse,moveR,moveL,moveU,moveD, move, pointActive, moveToPoint, player } 
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 
-let debug=new Obj(0,0,0,0),
 
-<<<<<<< HEAD
- debugMode=true,
-=======
-
-//localStorage._deleteLocation()  
 let debug=new Obj(800,0,64,64),
 
  debugMode=false,
->>>>>>> origin
  click=false,
  dragable=false;
  let room=3
@@ -96,12 +89,7 @@ room=2
   }
   
   else if (k=="z"){
-<<<<<<< HEAD
-    
-    
-
-=======
->>>>>>> origin
+       
   }
 
   },false);
