@@ -5,9 +5,11 @@ import Obj from "./obj.js"
 
 
 
+       localStorage.getItem(player.x)
+       console.log(localStorage)
   
+       localStorage.setItem("db",player.x)     
   const MovePlayer=()=>{
-                  
     if (moveR[0]&&moveU[0]){
       player.x+=player.spd
       player.y-=player.spd

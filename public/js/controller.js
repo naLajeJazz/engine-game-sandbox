@@ -6,6 +6,8 @@ import Obj from './obj.js'
 import {canvas} from './obj.js'
 
 
+
+//localStorage._deleteLocation()  
 let debug=new Obj(800,0,64,64),
 
  debugMode=false,
@@ -85,7 +87,6 @@ room=2
        
   }
   else if (k=="z"){
-       
   }
 
   },false);
