@@ -1,11 +1,6 @@
-
-
-
 import {mouse,moveR,moveL,moveU,moveD, move, pointActive, moveToPoint, player } from './globalVar.js';
-
 import Obj from './obj.js'
 import {canvas} from './obj.js'
-
 
 let debug=new Obj(0,0,0,0),
 
@@ -13,9 +8,6 @@ let debug=new Obj(0,0,0,0),
  click=false,
  dragable=false;
  let room=3
-
-
-
 
 ////controles////
 
@@ -83,13 +75,10 @@ room=2
     move[0]=true    
   }
   else if (k=="o"){
-    localStorage.setItem("playerysave","novo")
+    
   }
   else if (k=="x"){
     
-    //localStorage.setItem("playerxsave",JSON.stringify(player.x))
-    //localStorage.setItem("playerysave",JSON.stringify(player.y))
-    //localStorage.setItem("playerysave","helo")
 
   }
   

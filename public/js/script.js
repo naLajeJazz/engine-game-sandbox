@@ -43,7 +43,7 @@ DragDrop();
 OnOff();
 
 }else if (room==3){
-  canvas.style.backgroundColor="black";
+  canvas.style.backgroundColor="#313702";
 
   
 MovePlayer();

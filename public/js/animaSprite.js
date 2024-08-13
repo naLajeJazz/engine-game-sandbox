@@ -1,11 +1,21 @@
 import { xIndexPlayer, yIndexPlayer } from "./anima.js"
 import { debugMode } from "./controller.js"
-import { player,moveR,moveL,moveU,moveD, move,box, boxMask, playerMask, boxMaskL, boxMaskR, boxMaskD, boxMaskU, grass, ground, loteGrround, dirT, lotedirt } from "./globalVar.js"
-import { dirtImg, grassImg, hairImg, pantsImg, playerImg, roupaImg } from "./Img.js"
+import { player,moveR,moveL,moveU,moveD, move,
+   grass, ground, loteGrround, dirT, lotedirt,boxes, boxesMaskD,
+   boxesMaskU,boxesMaskR,boxesMaskL,
+   loteBoxes } from "./globalVar.js"
+import { blockImg, dirtImg, grassImg, hairImg,
+   pantsImg, playerImg, roupaImg } from "./Img.js"
 import Obj from "./obj.js"
 
 
 const AnimaSp=()=>{
+
+
+  for(let i=0;i<loteBoxes;i++){                                               
+    boxes[i].Sprite(blockImg,boxes[i].w,boxes[i].h)
+    }; 
+
     
     if (moveR[0]&&moveU[0]){
         
@@ -83,6 +93,11 @@ const AnimaSp=()=>{
         player.SpriteAnime(pantsImg,xIndexPlayer,yIndexPlayer+64*4,player.w,player.h)
         player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer+64*4,player.w,player.h)
       }
+
+
+      
+     
+
 }
 
 export default AnimaSp

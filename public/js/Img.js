@@ -32,6 +32,9 @@ pantsImg.setAttribute("src","./assets/spPants.png");
 let hairImg = document.createElement("IMG");
 hairImg.setAttribute("src","./assets/spHair.png");
 
+let blockImg = document.createElement("IMG");
+blockImg.setAttribute("src","./assets/block.png");
+
 export {
                   mouseImg,
                   btnImg,
@@ -41,6 +44,6 @@ export {
                   player2Img,
                   grassImg,dirtImg,
                   roupaImg,pantsImg,
-                  hairImg
+                  hairImg,blockImg
         
 }
