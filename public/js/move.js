@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import {canvas} from './obj.js'
 import AnimaSp from "./animaSprite.js"
 import { debugMode } from "./controller.js"
@@ -80,59 +80,6 @@ if(moveU[0]
   if(boxesMaskD[1].collideBolean){boxes[1].y-=player.spd-2}
   if(boxesMaskD[2].collideBolean){boxes[2].y-=player.spd-2}   
   } 
-=======
-import { xIndexPlayer, yIndexPlayer } from "./anima.js"
-import { player,moveR,moveL,moveU,moveD, move } from "./globalVar.js"
-import { playerImg } from "./Img.js"
-import Obj from "./obj.js"
-
-
-
-       localStorage.getItem(player.x)
-       console.log(localStorage)
-  
-       localStorage.setItem("db",player.x)     
-  const MovePlayer=()=>{
-    if (moveR[0]&&moveU[0]){
-      player.x+=player.spd
-      player.y-=player.spd
-      player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
-    }
- else
- if (moveR[0]&&moveD[0]){
-  player.x+=player.spd
-  player.y+=player.spd
-  player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
-}else
-if (moveL[0]&&moveU[0]){
-  player.x-=player.spd
-  player.y-=player.spd
-  player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
-}else
-if (moveL[0]&&moveD[0]){
-  player.x-=player.spd
-  player.y+=player.spd
-  player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
-}else
-    if (moveR[0]){
-      player.x+=player.spd
-      player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+128,player.w,player.h)
-      
-    }else
-    if(moveL[0]){
-      player.x-=player.spd
-      player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+64,player.w,player.h)
-    }else
-    if (moveU[0]){
-      player.y-=player.spd
-      player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
-    }else
-    if(moveD[0]){
-      player.y+=player.spd
-      player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
-    } 
-   
->>>>>>> origin
 
 
 //player move
