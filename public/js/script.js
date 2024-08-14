@@ -13,6 +13,7 @@ import DragDrop from './DragDrop.js'
 import OnOff from './OnOff.js'
 import MovePlayer from './move.js'
 import MovePoint from './movePoint.js'
+import rooms from './rooms.js'
 
 //////GAME////
 
@@ -46,7 +47,8 @@ if(room==0){
 
 }else if (room==3){
 
-  canvas.style.backgroundColor="#313702";
+  
+  rooms.soloB()
   MovePlayer();
   MovePoint();
 }

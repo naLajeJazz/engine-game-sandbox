@@ -64,13 +64,18 @@ for(let i=0;i<loteOrcs;i++){
   
 };
 
-let player = new Obj(0,300,64,64,2),
+let player = new Obj(600,300,64,64,2),
 moveR=[false],
 moveL=[false],
 moveU=[false],
 moveD=[false],
 move=[false],
+push=[false],
 playerMask=new Obj(player.x,player.y,player.w-48,player.h-48),
+playerMaskPushR=new Obj(player.x,player.y,player.w,player.h),
+playerMaskPushL=new Obj(player.x,player.y,player.w,player.h),
+playerMaskPushU=new Obj(player.x,player.y,player.w,player.h),
+playerMaskPushD=new Obj(player.x,player.y,player.w,player.h),
 roupa= new Obj(player.x,player.y,player.w,player.h),
 pants= new Obj(player.x,player.y,player.w,player.h);
 
@@ -113,7 +118,7 @@ loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,
 moveU,moveD,move,pointCollidePlayer,pointActive,point,moveToPoint,
 player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,grass,ground,
 loteGrround,dirT,lotedirt,roupa,pants,boxes,boxesMaskD,boxesMaskL,
-boxesMaskR,boxesMaskU,loteBoxes,playerMask
+boxesMaskR,boxesMaskU,loteBoxes,playerMask,push,playerMaskPushU,playerMaskPushD,playerMaskPushL,playerMaskPushR
 
 
 }

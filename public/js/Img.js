@@ -12,7 +12,7 @@ let monitorImg = document.createElement("IMG");
 monitorImg.setAttribute("src","./assets/monitor.png");
 
 let playerImg = document.createElement("IMG");
-playerImg.setAttribute("src","./assets/sp24.png");
+playerImg.setAttribute("src","./assets/sp15.png");
 
 let player2Img = document.createElement("IMG");
 player2Img.setAttribute("src","./assets/sp1.png");
@@ -22,6 +22,12 @@ grassImg.setAttribute("src","./assets/grass.png");
 
 let dirtImg = document.createElement("IMG");
 dirtImg.setAttribute("src","./assets/dirt.png");
+
+let grass2Img = document.createElement("IMG");
+grass2Img.setAttribute("src","./assets/grass2.png");
+
+let dirt2Img = document.createElement("IMG");
+dirt2Img.setAttribute("src","./assets/dirt2.png");
 
 let roupaImg = document.createElement("IMG");
 roupaImg.setAttribute("src","./assets/spTshirt.png");
@@ -35,6 +41,9 @@ hairImg.setAttribute("src","./assets/spHair.png");
 let blockImg = document.createElement("IMG");
 blockImg.setAttribute("src","./assets/block.png");
 
+let playerPushImg = document.createElement("IMG");
+playerPushImg.setAttribute("src","./assets/sp15push.png");
+
 export {
                   mouseImg,
                   btnImg,
@@ -43,7 +52,8 @@ export {
                   playerImg,
                   player2Img,
                   grassImg,dirtImg,
+                  grass2Img,dirt2Img,
                   roupaImg,pantsImg,
-                  hairImg,blockImg
+                  hairImg,blockImg,playerPushImg
         
 }

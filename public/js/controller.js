@@ -3,9 +3,9 @@ import Obj from './obj.js'
 import {canvas} from './obj.js'
 
 
-let debug=new Obj(0,0,64,64),
+let debug=new Obj(60,0,64,64),
 
- debugMode=false,
+ debugMode=true,
  click=false,
  dragable=false;
  let room=3

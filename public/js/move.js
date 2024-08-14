@@ -7,6 +7,7 @@ import { player,moveR,moveL,moveU,moveD, move,
    boxesMaskU,boxesMaskR,boxesMaskL,
    loteBoxes,
    playerMask,
+   playerMaskPushR,
   
 } from "./globalVar.js"
 import { blockImg, dirtImg, grassImg } from "./Img.js"
@@ -24,28 +25,10 @@ for(let i=0;i<loteBoxes;i++){
 
   const MovePlayer=()=>{
   
-    for(let i=0;i<loteGrround;i++){                                               
-      ground[i].Sprite(grassImg,64,64)
-      };  
-
-      for(let i=0;i<lotedirt;i++){                                               
-        dirT[i].Sprite(dirtImg,64,64)
-        };  
-
+  
         AnimaSp();
 
-        if (debugMode){
-          playerMask.DrawRect("orange",1)
-          
-         
-          for(let i=0;i<loteBoxes;i++){
-            boxes[i].Draw("red",0.2)
-            boxesMaskL[i].DrawRect("blue")
-            boxesMaskR[i].DrawRect("green")
-            boxesMaskD[i].DrawRect("yellow")
-            boxesMaskU[i].DrawRect("white")
-            
-          };}
+      
 
 
   playerMecanics.moveBlock();
