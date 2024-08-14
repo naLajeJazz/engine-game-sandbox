@@ -6,7 +6,9 @@ import { move, moveR, moveToPoint, slimeDir,
   moveU, moveD,
   playerMask,
   loteBoxes, boxes, boxesMaskD,
-  boxesMaskU,boxesMaskR,boxesMaskL, push, playerMaskPushR, playerMaskPushD, playerMaskPushU, playerMaskPushL} from './globalVar.js'
+  boxesMaskU,boxesMaskR,boxesMaskL, push,
+   playerMaskPushR, playerMaskPushD, 
+   playerMaskPushU, playerMaskPushL, boxesmask} from './globalVar.js'
 import Obj from './obj.js'
 
 const Debugar=()=>{
@@ -14,14 +16,13 @@ const Debugar=()=>{
                   player.spd ${player.spd}
                   push ${push[0]}
                   move ${move[0]}
-                  push ${push[0]}
+                  boxesmask ${boxes[0].collideBolean}
                   
 
                   `)
                 debug.hudMsg(debug.x-100,debug.y+42,"green","20px DePixel",`
-                boxes[i] ${boxes[0].collideBolean}
-                boxes[i] ${boxes[1].collideBolean}
-                boxes[i] ${boxes[2].collideBolean}
+                
+                
                
                   `)
 

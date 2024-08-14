@@ -4,7 +4,8 @@ import { player,moveR,moveL,moveU,moveD, move,
    loteBoxes,
    playerMask,
    push,
-   playerMaskPushR
+   playerMaskPushR,
+   boxesmask
    } from "./globalVar.js"
 
 
@@ -52,7 +53,7 @@ if(!move[0]){
  
   }
 const moveBlock=()=>{
-                           
+                          
 // empurrar boxes
 if(moveR[0]
                   &&boxesMaskL[0].collideBolean

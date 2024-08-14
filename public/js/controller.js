@@ -5,7 +5,7 @@ import {canvas} from './obj.js'
 
 let debug=new Obj(60,0,64,64),
 
- debugMode=true,
+ debugMode=false,
  click=false,
  dragable=false;
  let room=3

@@ -11,9 +11,12 @@ import {mouseCollideBloco,bloco,monitor,slime,orcs,
 loteOrcs,blocos,loteBlocos,text,txt,rand,mouse}from './globalVar.js'
 import DragDrop from './DragDrop.js'
 import OnOff from './OnOff.js'
-import MovePlayer from './move.js'
 import MovePoint from './movePoint.js'
 import rooms from './rooms.js'
+import playerMecanics from './playerMecanics.js'
+import animaSprite from './animaSprite.js'
+import Slime from './creatures.js'
+
 
 //////GAME////
 
@@ -48,14 +51,18 @@ if(room==0){
 }else if (room==3){
 
   
-  rooms.soloB()
-  MovePlayer();
-  MovePoint();
+  rooms.solo();
+  animaSprite.Animaboxes();
+  animaSprite.AnimaSp();
+  playerMecanics.moveBlock();
+  playerMecanics.MovePlayer();
+  Slime();
+ 
+
 }
 else if (room==4){
 
-  canvas.style.backgroundColor="#222601";
-
+  rooms.soloB();
   MovePoint();
   
   }

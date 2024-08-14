@@ -5,7 +5,7 @@ import { player,moveR,moveL,moveU,moveD, move, pointActive,
 import { player2Img } from "./Img.js"
 import Obj from "./obj.js"
 
-import MovePlayer from "./move.js"
+
 import { room } from "./controller.js"
 
 import {canvas} from './obj.js'

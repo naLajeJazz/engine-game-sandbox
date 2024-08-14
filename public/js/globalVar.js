@@ -99,6 +99,7 @@ let point=new Obj(player.x,player.y,8,8),
     
 //
 let boxes=[];
+let boxesmask=[];
 let boxesMaskL=[];
 let boxesMaskR=[];
 let boxesMaskD=[];
@@ -106,6 +107,7 @@ let boxesMaskU=[];
 let loteBoxes=3;
 for(let i=0;i<loteBoxes;i++){
   boxes[i]=new Obj(0,0,64,64)
+  boxesmask[i]=new Obj(boxes[i.x],boxes[i].y,boxes[i].w,boxes[i].h)
   boxesMaskL[i]=new Obj(boxes[i].x-boxes[i].w/32,boxes[i].y,boxes[i].w/boxes[i].w,boxes[i].h)
   boxesMaskR[i]=new Obj(boxes[i].x+boxes[i].w+boxes[i].w/32,boxes[i].y,boxes[i].w/boxes[i].w,boxes[i].h)
   boxesMaskD[i]=new Obj(boxes[i].x,boxes[i].y+boxes[i].h+boxes[i].h/32,boxes[i].w,boxes[i].h/boxes[i].h)
@@ -118,7 +120,8 @@ loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,
 moveU,moveD,move,pointCollidePlayer,pointActive,point,moveToPoint,
 player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,grass,ground,
 loteGrround,dirT,lotedirt,roupa,pants,boxes,boxesMaskD,boxesMaskL,
-boxesMaskR,boxesMaskU,loteBoxes,playerMask,push,playerMaskPushU,playerMaskPushD,playerMaskPushL,playerMaskPushR
+boxesMaskR,boxesMaskU,loteBoxes,playerMask,push,playerMaskPushU,
+playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask
 
 
 }
