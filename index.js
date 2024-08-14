@@ -33,12 +33,12 @@ const db = new sqlite3.Database("./test.db", sqlite3.OPEN_READWRITE, (err) => {
                   if (err) return console.error(err.message);
                 });
           */
-         /*
+         
                 sql = `DELETE FROM dataGame WHERE id = ?`;
-                db.run(sql, [3], (err) => {
+                db.run(sql, [2], (err) => {
                 if (err) return console.error(err.message);
                 });
-            */    
+               
 
 
         sql = `SELECT * FROM dataGame`; 

@@ -13,8 +13,6 @@ const Debugar=()=>{
                   debug.hudMsg(debug.x,debug.y+16,"red","20px DePixel",` 
                   player.x ${player.x}
                   player.y ${player.y}
-                  moveL ${moveL}
-                  moveR ${moveR}
                   player.spd ${player.spd}
 
                   `)

@@ -30,27 +30,32 @@ Debugar();
 } 
 
 if(room==0){
-  canvas.style.backgroundColor="black";
-IntroScreen();
-}else if(room==1){
-  canvas.style.backgroundColor="black";
 
-DragDrop();
+  canvas.style.backgroundColor="black";
+  IntroScreen();
+
+}else if(room==1){
+
+  canvas.style.backgroundColor="black";
+  DragDrop();
 
 }else if(room==2){
-  canvas.style.backgroundColor="black";
 
-OnOff();
+  canvas.style.backgroundColor="black";
+  OnOff();
 
 }else if (room==3){
-  canvas.style.backgroundColor="#313702";
 
-  
-MovePlayer();
+  canvas.style.backgroundColor="#313702";
+  MovePlayer();
+  MovePoint();
 }
 else if (room==4){
+
   canvas.style.backgroundColor="#222601";
+
   MovePoint();
+  
   }
   else if (room==5){
     canvas.style.backgroundColor="black";

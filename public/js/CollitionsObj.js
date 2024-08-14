@@ -21,8 +21,8 @@ pointCollidePlayer.y=point.y;
 pointCollidePlayer2.x=point.x;
 pointCollidePlayer2.y=point.y;
 
-playerMask.x=player.x+14;
-playerMask.y=player.y+38;
+playerMask.x=player.x+24;
+playerMask.y=player.y+46;
 
 for(let i=0;i<loteBoxes;i++){
     
