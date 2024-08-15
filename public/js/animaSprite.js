@@ -7,6 +7,7 @@ import { player,moveR,moveL,moveU,moveD, move,boxes, boxesMaskD,
    boxesmask} from "./globalVar.js"
 import { blockImg, dirtImg, grassImg, hairImg,
    pantsImg, playerImg, playerPushImg, roupaImg } from "./Img.js"
+import { debugMode } from './controller.js';
 
 
 //cria os boxes aleatoriamente pela screen
@@ -17,16 +18,18 @@ for(let i=0;i<loteBoxes;i++){
 
   
 const Animaboxes=()=>{
-  
+  if(!debugMode){
+
+ 
   for(let i=0;i<loteBoxes;i++){  
                                                 
     boxes[i].Sprite(blockImg,boxes[i].w,boxes[i].h)
     }; 
 
 }
-
+}
 const AnimaSp=()=>{
-
+  if(!debugMode){
    /////Animaçao do movimento player 
 
    if (!push[0]&&moveR[0]&&moveU[0]){
@@ -112,7 +115,7 @@ player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
       if(push[0]&&moveR[0]){
         player.SpriteAnime(playerPushImg,xIndexPlayer,yIndexPlayer+128,player.w,player.h)
         } 
-            
+  }       
 }
 
 export default {AnimaSp,Animaboxes}

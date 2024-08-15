@@ -1,4 +1,3 @@
-
 import {debug,debugMode,click,room,dragable} from './controller.js'
 import { drag } from "./DragDrop.js"
 import { move, moveR, moveToPoint, slimeDir,
@@ -13,14 +12,13 @@ import Obj from './obj.js'
 
 const Debugar=()=>{
                   debug.hudMsg(debug.x,debug.y+16,"red","20px DePixel",` 
-                  player.spd ${player.spd}
                   push ${push[0]}
                   move ${move[0]}
-                  boxesmask ${boxes[0].collideBolean}
+                  
                   
 
                   `)
-                debug.hudMsg(debug.x-100,debug.y+42,"green","20px DePixel",`
+                debug.hudMsg(debug.x,debug.y+42,"green","20px DePixel",`
                 
                 
                

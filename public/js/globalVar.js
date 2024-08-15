@@ -115,13 +115,18 @@ for(let i=0;i<loteBoxes;i++){
   
 };
 
+
+let circle=new Obj(canvas.width/2,canvas.height/2)
+
+
+
 export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
 loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,
 moveU,moveD,move,pointCollidePlayer,pointActive,point,moveToPoint,
 player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,grass,ground,
 loteGrround,dirT,lotedirt,roupa,pants,boxes,boxesMaskD,boxesMaskL,
 boxesMaskR,boxesMaskU,loteBoxes,playerMask,push,playerMaskPushU,
-playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask
+playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask,circle
 
 
 }

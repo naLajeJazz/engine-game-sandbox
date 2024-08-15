@@ -3,6 +3,7 @@ import { monitorImg,slimeImg } from "./Img.js";
 
 import {xIndex,yIndex,xIndexSlime,yIndexSlime} from './anima.js'
 import { slimeDir,loteOrcs, orcs,monitor,slime,txt } from './globalVar.js';
+import { debugMode } from './controller.js';
 
 
 const Slime=()=>{
@@ -21,6 +22,8 @@ const Slime=()=>{
                                     }
 
 
+if (!debugMode){
+
 
 
                   for(let i=0;i<loteOrcs;i++){
@@ -34,12 +37,12 @@ const Slime=()=>{
                                     }
                                                                        
                                                                        
-                                                                      
+                                                                              
                                                                           
                                    
                                     orcs[i].Draw("#A9DEF9")
                                                                          
-                                                                       
+                  }                                                  
                                                                          
                                     };  
                                                                       

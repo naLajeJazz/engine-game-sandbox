@@ -52,6 +52,7 @@ export default class Obj {
     ctx.restore()
   };
   DrawCicle(radius,sAngle,eAngle,color,colorfill,alpha){
+    ctx.save()
     ctx.beginPath();
     ctx.arc(this.x, this.y, radius, sAngle, eAngle);
     ctx.strokeStyle = color;
@@ -59,6 +60,7 @@ export default class Obj {
     ctx.fillStyle = colorfill;
     ctx.fill();
     ctx.stroke();
+    ctx.restore()
   };
   Shadow(color,blur,xshadow,yshadow){
     
@@ -94,7 +96,7 @@ ctx.save()
 ctx.globalAlpha = alpha;
 ctx.font = fntSizefont;
 ctx.fillStyle = msgColor;
-ctx.textAlign = "start";
+ctx.textAlign = "left";
 ctx.fillText(msg, this.msgX, this.msgY);
 ctx.restore()
 }

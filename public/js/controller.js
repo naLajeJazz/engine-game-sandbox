@@ -3,7 +3,7 @@ import Obj from './obj.js'
 import {canvas} from './obj.js'
 
 
-let debug=new Obj(60,0,64,64),
+let debug=new Obj(0,0,0,0),
 
  debugMode=false,
  click=false,
