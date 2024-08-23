@@ -3,7 +3,7 @@ import {canvas} from './obj.js'
 import {ctx} from './obj.js'
 import{mouseImg} from './Img.js'
 import {debugMode,room,dragable } from './controller.js'
-import col from './CollitionsObj.js'
+import Collitions from './CollitionsObj.js'
 import{yIndex}from './anima.js'
 import IntroScreen from './IntroScreen.js'
 import Debugar from './debug.js'
@@ -22,13 +22,14 @@ import Slime from './creatures.js'
 //////GAME////
 
 
-function game (){
-requestAnimationFrame(game,canvas);
+function Game (){
+requestAnimationFrame(Game,canvas);
 ctx.clearRect(0,0,canvas.width,canvas.height);
 
                     /////GAME UPDATE//////
                             
-col();
+                    canvas.width=window.innerWidth;
+                    canvas.height=window.innerHeight
 
 if(debugMode){
 Debugar();
@@ -51,12 +52,13 @@ if(room==0){
 
 }else if (room==3){
 
-  
-  rooms.solo();
+  Collitions();
+  rooms.Tiles();
   animaSprite.Animaboxes();
-  animaSprite.AnimaSp();
-  playerMecanics.moveBlock();
+  animaSprite.AnimaPlayer();
+  playerMecanics.MoveBlock();
   playerMecanics.MovePlayer();
+  MovePoint();
   Slime();
  
 
@@ -76,7 +78,7 @@ if (dragable){mouse.SpriteAnime(mouseImg,0,yIndex+64,mouse.w,mouse.h)}else{mouse
 
 
 };
-game();
+Game();
 
 
 export{

@@ -11,7 +11,7 @@ import { player,moveR,moveL,moveU,moveD, move,
 
 const MovePlayer=()=>{
 
-//player move
+//Move player
 
 if(moveR[0]
   &&!boxesMaskL[0].collideBolean
@@ -52,7 +52,7 @@ if(!move[0]){
   
  
   }
-const moveBlock=()=>{
+const MoveBlock=()=>{
                           
 // empurrar boxes
 if(moveR[0]
@@ -96,4 +96,4 @@ if(moveR[0]
                 
                 
 }
-export default {MovePlayer, moveBlock}
+export default {MovePlayer, MoveBlock}

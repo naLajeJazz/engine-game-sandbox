@@ -10,7 +10,7 @@ import{mouseCollideBloco,bloco,orcs,loteOrcs,
 
 
 
-const col=()=>{
+const Collitions=()=>{
                   
 ///FIXA MASCARA DE COLLISÃO
 
@@ -28,10 +28,13 @@ playerMask.y=player.y+46;
 
 playerMaskPushR.x=player.x;
 playerMaskPushR.y=player.y+8;
+
 playerMaskPushL.x=player.x;
-playerMaskPushL.y=player.y+8;
+playerMaskPushL.y=player.y+8
+
 playerMaskPushD.x=player.x;
 playerMaskPushD.y=player.y+8;
+
 playerMaskPushU.x=player.x;
 playerMaskPushU.y=player.y+8;
 
@@ -95,4 +98,4 @@ for(let i=0;i<loteBlocos;i++){
 
 }
 
-export default col;
+export default Collitions;

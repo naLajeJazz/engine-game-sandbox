@@ -12,9 +12,10 @@ import { debugMode } from './controller.js';
 
 
 
-  const solo=()=>{
+  const Tiles=()=>{
     if(!debugMode){
     canvas.style.backgroundColor="#313702";
+
     for(let i=0;i<loteGrround;i++){                                               
       ground[i].Sprite(grassImg,64,64)
       };  
@@ -41,4 +42,4 @@ import { debugMode } from './controller.js';
                
                 }
 
-  export default{solo,soloB} 
+  export default{Tiles,soloB} 

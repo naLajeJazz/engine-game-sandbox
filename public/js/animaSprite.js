@@ -28,7 +28,7 @@ const Animaboxes=()=>{
 
 }
 }
-const AnimaSp=()=>{
+const AnimaPlayer=()=>{
   if(!debugMode){
    /////Animaçao do movimento player 
 
@@ -118,4 +118,4 @@ player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
   }       
 }
 
-export default {AnimaSp,Animaboxes}
+export default {AnimaPlayer,Animaboxes}

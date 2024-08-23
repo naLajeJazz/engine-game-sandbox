@@ -1,8 +1,8 @@
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 
-canvas.width=screen.width;
-canvas.height=screen.height+8;
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight
 canvas.style.backgroundColor="black";
 
 ////Objetos////
@@ -64,7 +64,7 @@ for(let i=0;i<loteOrcs;i++){
   
 };
 
-let player = new Obj(600,300,64,64,2),
+let player = new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height),64,64,2),
 moveR=[false],
 moveL=[false],
 moveU=[false],
