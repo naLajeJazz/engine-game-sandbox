@@ -1,8 +1,9 @@
 import {canvas} from './obj.js'
-import { monitorImg,slimeImg } from "./Img.js";
+import { butterflyImg, monitorImg,slimeImg } from "./Img.js";
 
-import {xIndex,yIndex,xIndexSlime,yIndexSlime} from './anima.js'
-import { slimeDir,loteOrcs, orcs,monitor,slime,txt } from './globalVar.js';
+import {xIndex,yIndex,xIndexSlime,yIndexSlime, xIndexButt, yIndexButt} from './anima.js'
+import { slimeDir,loteOrcs, orcs,monitor,slime,
+                  txt, creatureDir, butterfly } from './globalVar.js';
 import { debugMode } from './controller.js';
 
 
@@ -22,34 +23,37 @@ const Slime=()=>{
                                     }
 
 
-if (!debugMode){
-
-
-
-                  for(let i=0;i<loteOrcs;i++){
  
-                                    let randi=[];
-                                    randi[i]=Math.random()
-                                    orcs[i].y+=randi[i]
-                                                                       
-                                    if(orcs[i].y>canvas.height){
-                                    orcs[i].y=-32
-                                    }
-                                                                       
-                                                                       
-                                                                              
-                                                                          
-                                   
-                                    orcs[i].Draw("#A9DEF9")
-                                                                         
-                  }                                                  
-                                                                         
-                                    };  
                                                                       
-                                                                                                 
-                                   
-                                 
-                                                                      
+                                                                    
 }
-export default Slime
+
+const FlyButterfly=()=>{
+
+if(creatureDir==0){
+                  butterfly.x+=butterfly.spd
+}else
+if(creatureDir==1){
+                  butterfly.x-=butterfly.spd
+}else
+if(creatureDir==2){
+                  butterfly.y+=butterfly.spd
+}else
+if(creatureDir==3){
+                  butterfly.y-=butterfly.spd
+}else
+if(creatureDir==4){
+                  butterfly.spd=0
+}butterfly.spd=0.2
+ 
+ //butterfly.Sprite(butterflyImg,butterfly.w,butterfly.h)
+ butterfly.SpriteAnime(butterflyImg,xIndexButt,yIndexButt,butterfly.w,butterfly.h)
+               //butterfly.Draw("red")
+ 
+                                                                      
+                                                                    
+}
+
+
+export default {Slime, FlyButterfly}
 

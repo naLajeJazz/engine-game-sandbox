@@ -12,7 +12,7 @@ let monitorImg = document.createElement("IMG");
 monitorImg.setAttribute("src","./assets/monitor.png");
 
 let playerImg = document.createElement("IMG");
-playerImg.setAttribute("src","./assets/sp15.png");
+playerImg.setAttribute("src","./assets/sp15.png")
 
 let player2Img = document.createElement("IMG");
 player2Img.setAttribute("src","./assets/sp1.png");
@@ -30,7 +30,7 @@ let dirt2Img = document.createElement("IMG");
 dirt2Img.setAttribute("src","./assets/dirt2.png");
 
 let roupaImg = document.createElement("IMG");
-roupaImg.setAttribute("src","./assets/spTshirt.png");
+roupaImg.setAttribute("src","./assets/spClothes.png");
 
 let pantsImg = document.createElement("IMG");
 pantsImg.setAttribute("src","./assets/spPants.png");
@@ -44,6 +44,9 @@ blockImg.setAttribute("src","./assets/block.png");
 let playerPushImg = document.createElement("IMG");
 playerPushImg.setAttribute("src","./assets/sp15push.png");
 
+let butterflyImg = document.createElement("IMG");
+butterflyImg.setAttribute("src","./assets/but.png");
+
 export {
                   mouseImg,
                   btnImg,
@@ -54,6 +57,7 @@ export {
                   grassImg,dirtImg,
                   grass2Img,dirt2Img,
                   roupaImg,pantsImg,
-                  hairImg,blockImg,playerPushImg
+                  hairImg,blockImg,playerPushImg,
+                  butterflyImg
         
 }

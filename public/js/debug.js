@@ -7,13 +7,15 @@ import { move, moveR, moveToPoint, slimeDir,
   loteBoxes, boxes, boxesMaskD,
   boxesMaskU,boxesMaskR,boxesMaskL, push,
    playerMaskPushR, playerMaskPushD, 
-   playerMaskPushU, playerMaskPushL, boxesmask} from './globalVar.js'
+   playerMaskPushU, playerMaskPushL, boxesmask, creatureRand, creatureDir} from './globalVar.js'
 import Obj from './obj.js'
 
 const Debugar=()=>{
                   debug.hudMsg(debug.x,debug.y+16,"red","20px DePixel",` 
                   push ${push[0]}
                   move ${move[0]}
+                  creatureRand ${creatureRand}
+                  creatureDir ${creatureDir}
                   
                   
 

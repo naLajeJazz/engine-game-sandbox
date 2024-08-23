@@ -1,4 +1,4 @@
-import{monitor,slime,player,player2}from './globalVar.js'
+import{monitor,slime,player,player2, butterfly}from './globalVar.js'
 
 
 ///anima Sprite
@@ -34,6 +34,15 @@ setInterval(()=>xIndexPlayer2+=player2.w,1000/animaSpdPlayer2);//a cada segundo 
 setInterval(()=>xIndexPlayer2=0,4000/animaSpdPlayer2);//quando chegar na ultima imagem volta pra primeira
 
 
+
+///anima Sprite
+let xIndexButt=0;
+let yIndexButt=0;
+let animaSpdButt=8//tem que ser multiplos de 2
+setInterval(()=>xIndexButt+=butterfly.w,1000/animaSpdButt);//a cada segundo pula 64 px na imagem, quatro frames na horizontal
+setInterval(()=>xIndexButt=0,4000/animaSpdButt);//quando chegar na ultima imagem volta pra primeira
+
+
 export{
                   xIndex,
                   yIndex,
@@ -43,4 +52,6 @@ export{
                   yIndexPlayer,
                   xIndexPlayer2,
                   yIndexPlayer2,
+                  xIndexButt,
+                  yIndexButt
 }

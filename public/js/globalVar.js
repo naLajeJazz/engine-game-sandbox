@@ -29,6 +29,12 @@ setInterval(() => {
   slimeDir="d"
 }, 8000);
 //
+let creature=new Obj(100,100,64,64,0.5),
+creatureDir=[],
+creatureRand=0;
+setInterval(() => {creatureDir=[creatureRand=Math.floor((Math.random() * 5) )] }, 5000);
+//
+let butterfly=new Obj(canvas.width/2,canvas.height/2,16,16,0.1);
 
 //
 let mouseCollideBloco=new Obj(mouse.x,mouse.y,mouse.w,mouse.h);
@@ -126,7 +132,8 @@ moveU,moveD,move,pointCollidePlayer,pointActive,point,moveToPoint,
 player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,grass,ground,
 loteGrround,dirT,lotedirt,roupa,pants,boxes,boxesMaskD,boxesMaskL,
 boxesMaskR,boxesMaskU,loteBoxes,playerMask,push,playerMaskPushU,
-playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask,circle
+playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask,circle,
+creatureRand, creatureDir,butterfly
 
 
 }

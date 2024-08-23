@@ -15,9 +15,8 @@ import MovePoint from './movePoint.js'
 import rooms from './rooms.js'
 import playerMecanics from './playerMecanics.js'
 import animaSprite from './animaSprite.js'
-import Slime from './creatures.js'
-
-
+import particles from './particles.js'
+import creatures from './creatures.js'
 
 //////GAME////
 
@@ -28,8 +27,7 @@ ctx.clearRect(0,0,canvas.width,canvas.height);
 
                     /////GAME UPDATE//////
                             
-                    canvas.width=window.innerWidth;
-                    canvas.height=window.innerHeight
+             
 
 if(debugMode){
 Debugar();
@@ -51,17 +49,17 @@ if(room==0){
   OnOff();
 
 }else if (room==3){
-
+ 
   Collitions();
   rooms.Tiles();
   animaSprite.Animaboxes();
   animaSprite.AnimaPlayer();
-  playerMecanics.MoveBlock();
+  //playerMecanics.MoveBlock();
   playerMecanics.MovePlayer();
-  MovePoint();
-  Slime();
- 
-
+  //MovePoint();
+  creatures.Slime();
+  particles.Rain();
+  creatures.FlyButterfly()
 }
 else if (room==4){
 
