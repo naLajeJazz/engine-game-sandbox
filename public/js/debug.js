@@ -9,7 +9,7 @@ import { move, moveR, moveToPoint, slimeDir,
    playerMaskPushR, playerMaskPushD, 
    playerMaskPushU, playerMaskPushL, boxesmask, creatureRand, creatureDir} from './globalVar.js'
 import Obj from './obj.js'
-
+import {canvas} from './obj.js'
 const Debugar=()=>{
                   debug.hudMsg(debug.x,debug.y+16,"red","20px DePixel",` 
                   push ${push[0]}
@@ -22,7 +22,8 @@ const Debugar=()=>{
                   `)
                 debug.hudMsg(debug.x,debug.y+42,"green","20px DePixel",`
                 
-                
+                creatureRand ${canvas.width}
+                  creatureDir ${canvas.height}
                
                   `)
 

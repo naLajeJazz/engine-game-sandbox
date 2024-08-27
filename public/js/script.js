@@ -52,14 +52,14 @@ if(room==0){
  
   Collitions();
   rooms.Tiles();
-  animaSprite.Animaboxes();
+  //animaSprite.Animaboxes();
   animaSprite.AnimaPlayer();
   //playerMecanics.MoveBlock();
   playerMecanics.MovePlayer();
   //MovePoint();
-  creatures.Slime();
-  particles.Rain();
-  creatures.FlyButterfly()
+  //creatures.Slime();
+  //particles.Rain();
+  //creatures.FlyButterfly()
 }
 else if (room==4){
 

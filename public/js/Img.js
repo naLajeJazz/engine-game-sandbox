@@ -18,7 +18,7 @@ let player2Img = document.createElement("IMG");
 player2Img.setAttribute("src","./assets/sp1.png");
 
 let grassImg = document.createElement("IMG");
-grassImg.setAttribute("src","./assets/grass.png");
+grassImg.setAttribute("src","./assets/room1.png");
 
 let dirtImg = document.createElement("IMG");
 dirtImg.setAttribute("src","./assets/dirt.png");

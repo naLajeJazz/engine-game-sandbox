@@ -49,7 +49,7 @@ for(let i=0;i<loteBlocos;i++){
 //
 
 let ground=[]
-let grass=new Obj(200,200),
+let grass=new Obj(0,0,0,0,2),
 loteGrround=40
 for(let i=0;i<loteGrround;i++){
  ground[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height))
@@ -70,7 +70,7 @@ for(let i=0;i<loteOrcs;i++){
   
 };
 
-let player = new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height),64,64,2),
+let player = new Obj(canvas.width/2,canvas.height/2,64,64,2),
 moveR=[false],
 moveL=[false],
 moveU=[false],
