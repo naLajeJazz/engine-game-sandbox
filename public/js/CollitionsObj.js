@@ -5,7 +5,8 @@ import{mouseCollideBloco,bloco,orcs,loteOrcs,
   player2,loteBoxes,boxesMaskD,boxesMaskL,boxesMaskU,boxesMaskR,boxes,
   move,moveR,moveL,moveU,moveD, playerMaskPushR,playerMaskPushD,playerMaskPushL,
   playerMaskPushU,
-  boxesmask
+  boxesmask,
+  grass
 }from './globalVar.js'
 
 
@@ -38,8 +39,13 @@ playerMaskPushD.y=player.y+8;
 playerMaskPushU.x=player.x;
 playerMaskPushU.y=player.y+8;
 
+
+
 for(let i=0;i<loteBoxes;i++){
-    
+///depois resolver isso
+  boxes[i].x=grass.x+978;
+  boxes[i].y=grass.y+554;
+//
   boxesMaskD[i].x=boxes[i].x
   boxesMaskD[i].y=boxes[i].y+boxes[i].h+boxes[i].h/32
 

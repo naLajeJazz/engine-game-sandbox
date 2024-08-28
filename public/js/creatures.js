@@ -1,9 +1,9 @@
 import {canvas} from './obj.js'
-import { butterflyImg, monitorImg,slimeImg } from "./Img.js";
+import { butterflyImg, grass2Img, monitorImg,slimeImg } from "./Img.js";
 
 import {xIndex,yIndex,xIndexSlime,yIndexSlime, xIndexButt, yIndexButt} from './anima.js'
 import { slimeDir,loteOrcs, orcs,monitor,slime,
-                  txt, creatureDir, butterfly } from './globalVar.js';
+                  txt, creatureDir, butterfly, grass } from './globalVar.js';
 import { debugMode } from './controller.js';
 
 

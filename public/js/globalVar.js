@@ -21,6 +21,17 @@ setInterval(() => {rand=Math.floor((Math.random() * text.length) ) }, 5000);
 let monitor=new Obj(canvas.width/2-150,canvas.height/2-150,300,300);
 
 //
+
+let ground=[]
+let grass=new Obj(0,0,0,0,2),
+loteGrround=40
+for(let i=0;i<loteGrround;i++){
+ ground[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height))
+ };
+
+
+
+
 let slime=new Obj(monitor.x+1,monitor.y-64,64,64,0.5),slimeDir="";
 setInterval(() => {
   slimeDir="e"
@@ -48,12 +59,6 @@ for(let i=0;i<loteBlocos;i++){
 
 //
 
-let ground=[]
-let grass=new Obj(0,0,0,0,2),
-loteGrround=40
-for(let i=0;i<loteGrround;i++){
- ground[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height))
- };
 
  let dirT=[]
  

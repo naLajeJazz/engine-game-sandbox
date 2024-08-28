@@ -2,7 +2,7 @@
 import {canvas} from './obj.js'
 import {ctx} from './obj.js'
 import{mouseImg} from './Img.js'
-import {debugMode,room,dragable } from './controller.js'
+import updateGamepadstatus, {debugMode,room,dragable } from './controller.js'
 import Collitions from './CollitionsObj.js'
 import{yIndex}from './anima.js'
 import IntroScreen from './IntroScreen.js'
@@ -18,6 +18,7 @@ import animaSprite from './animaSprite.js'
 import particles from './particles.js'
 import creatures from './creatures.js'
 
+
 //////GAME////
 
 
@@ -27,7 +28,7 @@ ctx.clearRect(0,0,canvas.width,canvas.height);
 
                     /////GAME UPDATE//////
                             
-             
+                   updateGamepadstatus()         
 
 if(debugMode){
 Debugar();
@@ -52,7 +53,7 @@ if(room==0){
  
   Collitions();
   rooms.Tiles();
-  //animaSprite.Animaboxes();
+  animaSprite.Animaboxes();
   animaSprite.AnimaPlayer();
   //playerMecanics.MoveBlock();
   playerMecanics.MovePlayer();
@@ -72,7 +73,7 @@ else if (room==4){
    
     }
 
-if (dragable){mouse.SpriteAnime(mouseImg,0,yIndex+64,mouse.w,mouse.h)}else{mouse.SpriteAnime(mouseImg,0,yIndex,mouse.w,mouse.h)}
+//if (dragable){mouse.SpriteAnime(mouseImg,0,yIndex+64,mouse.w,mouse.h)}else{mouse.SpriteAnime(mouseImg,0,yIndex,mouse.w,mouse.h)}
 
 
 };
