@@ -1,4 +1,5 @@
-import {mouse,moveR,moveL,moveU,moveD, move, pointActive, moveToPoint, player } from './globalVar.js';
+import {mouse,moveR,moveL,moveU,moveD, move,
+   pointActive, moveToPoint, player, grass, playerDir } from './globalVar.js';
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 
@@ -167,19 +168,21 @@ const isPressed= button.pressed;
 if(isPressed&&!wasPressed){
   console.log(`botao${index}foi pressionado`)
   if(index==15){
-    moveR[0]=true
+    moveR[0]=true;
+    move[0]=true;
+    
   }else
   if(index==14){
-    moveL[0]=true
+    moveL[0]=true;
+    move[0]=true;
   }else
   if(index==12){
-    moveU[0]=true
+    moveU[0]=true;
+    move[0]=true;
   }else
   if(index==13){
-    moveD[0]=true
-  }else
-  if(index==0){
-    player.spd=6
+    moveD[0]=true;
+    move[0]=true;
   }
  
   
@@ -188,16 +191,24 @@ if(isPressed&&!wasPressed){
 if (!isPressed&&wasPressed){
   console.log(`botao${index}foi solto`)
   if(index==15){
-    moveR[0]=false
+    moveR[0]=false;
+    move[0]=false;
   }else
   if(index==14){
-    moveL[0]=false
+    moveL[0]=false;
+    move[0]=false;
   }else
   if(index==12){
-    moveU[0]=false
+    moveU[0]=false;
+    move[0]=false;
   }else
   if(index==13){
-    moveD[0]=false
+    moveD[0]=false;
+    move[0]=false;
+  }else
+  if(index==0){
+    grass.spd=3;
+    move[0]=false;
   }
 }
 previusButtonStates[gamepad.index][index]=isPressed

@@ -22,12 +22,6 @@ let monitor=new Obj(canvas.width/2-150,canvas.height/2-150,300,300);
 
 //
 
-let ground=[]
-let grass=new Obj(0,0,0,0,2),
-loteGrround=40
-for(let i=0;i<loteGrround;i++){
- ground[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height))
- };
 
 
 
@@ -75,7 +69,9 @@ for(let i=0;i<loteOrcs;i++){
   
 };
 
-let player = new Obj(canvas.width/2,canvas.height/2,64,64,2),
+let player = new Obj(canvas.width/2,canvas.height/2,64,64,3),
+playerDir=[2],
+playerInteractDir=new Obj(player.x,player.y,player.w,player.h),
 moveR=[false],
 moveL=[false],
 moveU=[false],
@@ -129,6 +125,12 @@ for(let i=0;i<loteBoxes;i++){
 
 let circle=new Obj(canvas.width/2,canvas.height/2)
 
+let ground=[]
+let grass=new Obj(0,0,0,0,player.spd),
+loteGrround=40
+for(let i=0;i<loteGrround;i++){
+ ground[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height))
+ };
 
 
 export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
@@ -138,7 +140,7 @@ player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,grass,ground,
 loteGrround,dirT,lotedirt,roupa,pants,boxes,boxesMaskD,boxesMaskL,
 boxesMaskR,boxesMaskU,loteBoxes,playerMask,push,playerMaskPushU,
 playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask,circle,
-creatureRand, creatureDir,butterfly
+creatureRand, creatureDir,butterfly,playerDir,playerInteractDir
 
 
 }

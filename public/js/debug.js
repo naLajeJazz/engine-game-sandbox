@@ -7,7 +7,8 @@ import { move, moveR, moveToPoint, slimeDir,
   loteBoxes, boxes, boxesMaskD,
   boxesMaskU,boxesMaskR,boxesMaskL, push,
    playerMaskPushR, playerMaskPushD, 
-   playerMaskPushU, playerMaskPushL, boxesmask, creatureRand, creatureDir} from './globalVar.js'
+   playerMaskPushU, playerMaskPushL, boxesmask, 
+   creatureRand, creatureDir, playerDir} from './globalVar.js'
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 const Debugar=()=>{
@@ -22,8 +23,8 @@ const Debugar=()=>{
                   `)
                 debug.hudMsg(debug.x,debug.y+42,"green","20px DePixel",`
                 
-                creatureRand ${canvas.width}
-                  creatureDir ${canvas.height}
+               move ${move}
+               playerDir ${playerDir}
                
                   `)
 

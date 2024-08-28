@@ -6,7 +6,8 @@ import { player,moveR,moveL,moveU,moveD, move,
    push,
    playerMaskPushR,
    boxesmask,
-   grass
+   grass,
+   playerDir
    } from "./globalVar.js"
 
 
@@ -20,7 +21,8 @@ if(moveR[0]
   &&!boxesMaskL[2].collideBolean){
     if(moveU[0]||moveD[0]){player.spd=2}
     // player.x+=player.spd
-     grass.x-=grass.spd
+     grass.x-=player.spd
+     playerDir[0]=0
     }
 
 if(moveL[0]
@@ -29,7 +31,8 @@ if(moveL[0]
   &&!boxesMaskR[2].collideBolean){
     if(moveU[0]||moveD[0]){player.spd=2}
      //player.x-=player.spd
-     grass.x+=grass.spd
+     grass.x+=player.spd
+     playerDir[0]=1
     }
     
 
@@ -38,7 +41,8 @@ if(moveD[0]
   &&!boxesMaskU[1].collideBolean
   &&!boxesMaskU[2].collideBolean){
      //player.y+=player.spd
-     grass.y-=grass.spd
+     grass.y-=player.spd
+     playerDir[0]=2
     }
 
 if(moveU[0]
@@ -46,13 +50,15 @@ if(moveU[0]
   &&!boxesMaskD[1].collideBolean
   &&!boxesMaskD[2].collideBolean){
      //player.y-=player.spd
-     grass.y+=grass.spd
+     grass.y+=player.spd;
+     playerDir[0]=3;
     }
 
   
 if(!move[0]){
-      player.spd=3  
-      push[0]=false
+      player.spd=3;  
+      push[0]=false;
+      
     }
   
  
