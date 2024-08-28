@@ -1,4 +1,4 @@
-import {canvas} from './obj.js'
+import Obj, {canvas} from './obj.js'
 import { xIndexPlayer, yIndexPlayer } from "./anima.js"
 import { player,moveR,moveL,moveU,moveD, move,boxes, boxesMaskD,
    boxesMaskU,boxesMaskR,boxesMaskL,
@@ -6,7 +6,9 @@ import { player,moveR,moveL,moveU,moveD, move,boxes, boxesMaskD,
    push,
    boxesmask,
    playerDir,
-   playerInteractDir} from "./globalVar.js"
+   playerInteractDir,
+   interact,
+   playerBoxMsg} from "./globalVar.js"
 import { blockImg, dirtImg, grassImg, hairImg,
    pantsImg, playerImg, playerPushImg, roupaImg } from "./Img.js"
 import { debugMode } from './controller.js';
@@ -30,10 +32,17 @@ const Animaboxes=()=>{
 
 }
 }
+
 const AnimaPlayer=()=>{
-  
-  if(!debugMode){
+
+
+
+
+
+
+
    /////Animaçao do movimento player 
+   
    playerInteractDir.Draw("red");
 
    if (!push[0]&&moveR[0]&&moveU[0]){
@@ -182,7 +191,11 @@ playerInteractDir.y=player.y-64
       if(push[0]&&moveR[0]){
         player.SpriteAnime(playerPushImg,xIndexPlayer,yIndexPlayer+128,player.w,player.h)
         } 
-  }       
-}
+
+
+
+      
+          
+  }     
 
 export default {AnimaPlayer,Animaboxes}

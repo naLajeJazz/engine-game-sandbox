@@ -20,7 +20,7 @@ setInterval(()=>xIndexSlime=0,8000/animaSpdSlime);//quando chegar na ultima imag
 ///anima Sprite
 let xIndexPlayer=0;
 let yIndexPlayer=0;
-let animaSpdPlayer=8//tem que ser multiplos de 2
+let animaSpdPlayer=9//tem que ser multiplos de 2
 setInterval(()=>xIndexPlayer+=player.w,1000/animaSpdPlayer);//a cada segundo pula 64 px na imagem, quatro frames na horizontal
 setInterval(()=>xIndexPlayer=0,4000/animaSpdPlayer);//quando chegar na ultima imagem volta pra primeira
 

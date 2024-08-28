@@ -72,6 +72,8 @@ for(let i=0;i<loteOrcs;i++){
 let player = new Obj(canvas.width/2,canvas.height/2,64,64,3),
 playerDir=[2],
 playerInteractDir=new Obj(player.x,player.y,player.w,player.h),
+interact=[false],
+playerBoxMsg=new Obj(),
 moveR=[false],
 moveL=[false],
 moveU=[false],
@@ -140,7 +142,8 @@ player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,grass,ground,
 loteGrround,dirT,lotedirt,roupa,pants,boxes,boxesMaskD,boxesMaskL,
 boxesMaskR,boxesMaskU,loteBoxes,playerMask,push,playerMaskPushU,
 playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask,circle,
-creatureRand, creatureDir,butterfly,playerDir,playerInteractDir
+creatureRand, creatureDir,butterfly,playerDir,playerInteractDir,
+interact,playerBoxMsg
 
 
 }

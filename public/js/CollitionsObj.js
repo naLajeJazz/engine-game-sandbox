@@ -6,7 +6,8 @@ import{mouseCollideBloco,bloco,orcs,loteOrcs,
   move,moveR,moveL,moveU,moveD, playerMaskPushR,playerMaskPushD,playerMaskPushL,
   playerMaskPushU,
   boxesmask,
-  grass
+  grass,
+  playerInteractDir
 }from './globalVar.js'
 
 
@@ -43,8 +44,14 @@ playerMaskPushU.y=player.y+8;
 
 for(let i=0;i<loteBoxes;i++){
 ///depois resolver isso
-  boxes[i].x=grass.x+978;
-  boxes[i].y=grass.y+554;
+  boxes[0].x=grass.x+978;
+  boxes[0].y=grass.y+554;
+
+  boxes[1].x=grass.x+978;
+  boxes[1].y=grass.y+654;
+
+  boxes[2].x=grass.x+678;
+  boxes[2].y=grass.y+654;
 //
   boxesMaskD[i].x=boxes[i].x
   boxesMaskD[i].y=boxes[i].y+boxes[i].h+boxes[i].h/32
@@ -84,7 +91,9 @@ for(let i=0;i<loteBoxes;i++){
   boxesMaskL[i].collide(playerMask.x+4,playerMask.y,playerMask.w,playerMask.h);
   boxesMaskU[i].collide(playerMask.x,playerMask.y+4,playerMask.w,playerMask.h);
   boxesMaskR[i].collide(playerMask.x-4,playerMask.y,playerMask.w,playerMask.h);
-};
+
+  boxesmask[i].collide(playerInteractDir.x,playerInteractDir.y,playerInteractDir.w,playerInteractDir.h)
+  };
                      
 for(let i=0;i<loteOrcs;i++){
                   orcs[i].collide(mouse.x,mouse.y-32,mouse.w+64,mouse.h+64)

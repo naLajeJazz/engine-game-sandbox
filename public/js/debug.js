@@ -8,7 +8,7 @@ import { move, moveR, moveToPoint, slimeDir,
   boxesMaskU,boxesMaskR,boxesMaskL, push,
    playerMaskPushR, playerMaskPushD, 
    playerMaskPushU, playerMaskPushL, boxesmask, 
-   creatureRand, creatureDir, playerDir} from './globalVar.js'
+   creatureRand, creatureDir, playerDir, playerInteractDir, interact} from './globalVar.js'
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 const Debugar=()=>{
@@ -17,6 +17,7 @@ const Debugar=()=>{
                   move ${move[0]}
                   creatureRand ${creatureRand}
                   creatureDir ${creatureDir}
+                  interact ${interact[0]}
                   
                   
 
@@ -25,6 +26,9 @@ const Debugar=()=>{
                 
                move ${move}
                playerDir ${playerDir}
+               0 ${boxesmask[0].collideBolean}
+               1 ${boxesmask[1].collideBolean}
+               2 ${boxesmask[2].collideBolean}
                
                   `)
 
@@ -36,6 +40,7 @@ const Debugar=()=>{
                     boxes[0].Draw("red",0.2)
                     boxes[1].Draw("blue",0.2)
                     boxes[2].Draw("green",0.2)
+                    
                    
                     for(let i=0;i<loteBoxes;i++){
                       

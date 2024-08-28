@@ -1,5 +1,5 @@
 import {mouse,moveR,moveL,moveU,moveD, move,
-   pointActive, moveToPoint, player, grass, playerDir } from './globalVar.js';
+   pointActive, moveToPoint, player, grass, playerDir, interact } from './globalVar.js';
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 
@@ -183,6 +183,9 @@ if(isPressed&&!wasPressed){
   if(index==13){
     moveD[0]=true;
     move[0]=true;
+  }else
+  if(index==0){
+    interact[0]=true
   }
  
   
@@ -207,8 +210,7 @@ if (!isPressed&&wasPressed){
     move[0]=false;
   }else
   if(index==0){
-    grass.spd=3;
-    move[0]=false;
+    interact[0]=false;
   }
 }
 previusButtonStates[gamepad.index][index]=isPressed

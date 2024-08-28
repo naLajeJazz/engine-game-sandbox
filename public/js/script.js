@@ -17,6 +17,7 @@ import playerMecanics from './playerMecanics.js'
 import animaSprite from './animaSprite.js'
 import particles from './particles.js'
 import creatures from './creatures.js'
+import boxesInteracts from './worldInteract.js'
 
 
 //////GAME////
@@ -61,6 +62,7 @@ if(room==0){
   //creatures.Slime();
   //particles.Rain();
   //creatures.FlyButterfly()
+  boxesInteracts();
 }
 else if (room==4){
 
