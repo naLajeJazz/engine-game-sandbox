@@ -43,7 +43,7 @@ const AnimaPlayer=()=>{
 
    /////Animaçao do movimento player 
    
-   playerInteractDir.Draw("red");
+   playerInteractDir.DrawRect("white",0.2);
 
    if (!push[0]&&moveR[0]&&moveU[0]){
         
@@ -128,7 +128,8 @@ player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
     player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
     //player.SpriteAnime(pantsImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
     player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
-  }else 
+  }else
+  //////NO MOVE//// 
   if(!push[0]&&!move[0]){
 ////D dir
     if(playerDir[0]==2){
@@ -145,20 +146,20 @@ player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer,player.w,player.h)
 playerInteractDir.x=player.x+64
 
 
-      player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+128,player.w,player.h)
-      player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer+128,player.w,player.h)
+      player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+64*6,player.w,player.h)
+      player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer+64*6,player.w,player.h)
       //player.SpriteAnime(pantsImg,xIndexPlayer,yIndexPlayer+128,player.w,player.h)
-      player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer+128,player.w,player.h)
+    player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer+64*6,player.w,player.h)
     }else
     if(playerDir[0]==1){
 ////L dir
 playerInteractDir.x=player.x-64
 
 
-      player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+64,player.w,player.h)
-    player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer+64,player.w,player.h)
+      player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+64*5,player.w,player.h)
+    player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer+64*5,player.w,player.h)
     //player.SpriteAnime(pantsImg,xIndexPlayer,yIndexPlayer+64,player.w,player.h)
-    player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer+64,player.w,player.h)
+    player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer+64*5,player.w,player.h)
     }
     else
     if(playerDir[0]==3){
@@ -166,10 +167,10 @@ playerInteractDir.x=player.x-64
 playerInteractDir.x=player.x
 playerInteractDir.y=player.y-64
 
-      player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
-      player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
+      player.SpriteAnime(playerImg,xIndexPlayer,yIndexPlayer+64*7,player.w,player.h)
+      player.SpriteAnime(roupaImg,xIndexPlayer,yIndexPlayer+64*7,player.w,player.h)
       //player.SpriteAnime(pantsImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
-      player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer+64*3,player.w,player.h)
+      player.SpriteAnime(hairImg,xIndexPlayer,yIndexPlayer+64*7,player.w,player.h)
     }
 
     

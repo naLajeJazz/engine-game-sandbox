@@ -12,7 +12,7 @@ let monitorImg = document.createElement("IMG");
 monitorImg.setAttribute("src","./assets/monitor.png");
 
 let playerImg = document.createElement("IMG");
-playerImg.setAttribute("src","./assets/sp15.png")
+playerImg.setAttribute("src","./assets/sp15b.png")
 
 let player2Img = document.createElement("IMG");
 player2Img.setAttribute("src","./assets/sp1.png");
