@@ -15,10 +15,13 @@ const MovePlayer=()=>{
 
 //Move player
 
+
+
 if(moveR[0]
   &&!boxesMaskL[0].collideBolean
   &&!boxesMaskL[1].collideBolean
-  &&!boxesMaskL[2].collideBolean){
+  &&!boxesMaskL[2].collideBolean
+  &&!boxesMaskL[3].collideBolean){
     if(moveU[0]||moveD[0]){player.spd=2}
     // player.x+=player.spd
      grass.x-=player.spd
@@ -28,7 +31,8 @@ if(moveR[0]
 if(moveL[0]
   &&!boxesMaskR[0].collideBolean
   &&!boxesMaskR[1].collideBolean
-  &&!boxesMaskR[2].collideBolean){
+  &&!boxesMaskR[2].collideBolean
+  &&!boxesMaskR[3].collideBolean){
     if(moveU[0]||moveD[0]){player.spd=2}
      //player.x-=player.spd
      grass.x+=player.spd
@@ -39,7 +43,8 @@ if(moveL[0]
 if(moveD[0]
   &&!boxesMaskU[0].collideBolean
   &&!boxesMaskU[1].collideBolean
-  &&!boxesMaskU[2].collideBolean){
+  &&!boxesMaskU[2].collideBolean
+  &&!boxesMaskU[3].collideBolean){
      //player.y+=player.spd
      grass.y-=player.spd
      playerDir[0]=2
@@ -48,7 +53,8 @@ if(moveD[0]
 if(moveU[0]
   &&!boxesMaskD[0].collideBolean
   &&!boxesMaskD[1].collideBolean
-  &&!boxesMaskD[2].collideBolean){
+  &&!boxesMaskD[2].collideBolean
+  &&!boxesMaskD[3].collideBolean){
      //player.y-=player.spd
      grass.y+=player.spd;
      playerDir[0]=3;

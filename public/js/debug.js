@@ -29,6 +29,7 @@ const Debugar=()=>{
                0 ${boxesmask[0].collideBolean}
                1 ${boxesmask[1].collideBolean}
                2 ${boxesmask[2].collideBolean}
+               3 ${boxesmask[3].collideBolean}
                
                   `)
 
@@ -40,6 +41,7 @@ const Debugar=()=>{
                     boxes[0].Draw("red",0.2)
                     boxes[1].Draw("blue",0.2)
                     boxes[2].Draw("green",0.2)
+                    boxes[3].Draw("white",0.2)
                     
                    
                     for(let i=0;i<loteBoxes;i++){

@@ -43,6 +43,8 @@ playerMaskPushU.y=player.y+8;
 
 
 for(let i=0;i<loteBoxes;i++){
+  /*
+  ///posicionando os boxes nas roons
 ///depois resolver isso
   boxes[0].x=grass.x+978;
   boxes[0].y=grass.y+554;
@@ -52,9 +54,18 @@ for(let i=0;i<loteBoxes;i++){
 
   boxes[2].x=grass.x+678;
   boxes[2].y=grass.y+654;
+
+  boxes[3].x=grass.x+540;
+  boxes[3].y=grass.y+354;
+ */
+  
+
+  
 //
   boxesMaskD[i].x=boxes[i].x
   boxesMaskD[i].y=boxes[i].y+boxes[i].h+boxes[i].h/32
+
+
 
   boxesMaskL[i].x=boxes[i].x-boxes[i].w/32
   boxesMaskL[i].y=boxes[i].y

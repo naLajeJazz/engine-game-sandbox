@@ -8,17 +8,13 @@ import { player,moveR,moveL,moveU,moveD, move,boxes, boxesMaskD,
    playerDir,
    playerInteractDir,
    interact,
-   playerBoxMsg} from "./globalVar.js"
+   playerBoxMsg,
+   grass} from "./globalVar.js"
 import { blockImg, dirtImg, grassImg, hairImg,
    pantsImg, playerImg, playerPushImg, roupaImg } from "./Img.js"
 import { debugMode } from './controller.js';
 
 
-//cria os boxes aleatoriamente pela screen
-for(let i=0;i<loteBoxes;i++){                                               
-  boxes[i].x=Math.floor(Math.random()*canvas.width);
-  boxes[i].y=Math.floor(Math.random()*canvas.height);
-  }; 
 
   
 const Animaboxes=()=>{
@@ -27,7 +23,8 @@ const Animaboxes=()=>{
    
   for(let i=0;i<loteBoxes;i++){  
                                                 
-    boxes[i].Sprite(blockImg,boxes[i].w,boxes[i].h)
+    boxes[i].Draw("red")
+   
     }; 
 
 }
