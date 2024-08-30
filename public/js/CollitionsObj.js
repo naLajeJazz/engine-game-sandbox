@@ -43,50 +43,34 @@ playerMaskPushU.y=player.y+8;
 
 
 for(let i=0;i<loteBoxes;i++){
-  /*
-  ///posicionando os boxes nas roons
-///depois resolver isso
-  boxes[0].x=grass.x+978;
-  boxes[0].y=grass.y+554;
-
-  boxes[1].x=grass.x+978;
-  boxes[1].y=grass.y+654;
-
-  boxes[2].x=grass.x+678;
-  boxes[2].y=grass.y+654;
-
-  boxes[3].x=grass.x+540;
-  boxes[3].y=grass.y+354;
- */
-  
-
-  
-//
+                  
   boxesMaskD[i].x=boxes[i].x
   boxesMaskD[i].y=boxes[i].y+boxes[i].h+boxes[i].h/32
-
-
+  boxesMaskD[i].w=boxes[i].w
+  boxesMaskD[i].h=boxes[i].h/boxes[i].h
 
   boxesMaskL[i].x=boxes[i].x-boxes[i].w/32
   boxesMaskL[i].y=boxes[i].y
+  boxesMaskL[i].w=boxes[i].w/boxes[i].w
+  boxesMaskL[i].h=boxes[i].h
 
-  boxesMaskU[i].x=boxes[i].x
+  boxesMaskU[i].x=boxes[i].x  
   boxesMaskU[i].y=boxes[i].y-boxes[i].h/32
+  boxesMaskU[i].w=boxes[i].w  
+  boxesMaskU[i].h=boxes[i].h/boxes[i].h
 
+  
   boxesMaskR[i].x=boxes[i].x+boxes[i].w+boxes[i].w/32
   boxesMaskR[i].y=boxes[i].y
+  boxesMaskR[i].w=boxes[i].w/boxes[i].w
+  boxesMaskR[i].h=boxes[i].h
 
   boxesmask[i].x=boxes[i].x
   boxesmask[i].y=boxes[i].y
+  
 
   };
-  for(let i=0;i<loteBoxes;i++){
-   
-  
-    boxesmask[i].x=boxes[i].x
-    boxesmask[i].y=boxes[i].y
-  
-    };
+ 
   
 
 ///CHECA AS COLISOES DAS MASKS

@@ -2,13 +2,13 @@
 import {canvas} from './obj.js'
 import {ctx} from './obj.js'
 import{mouseImg} from './Img.js'
-import updateGamepadstatus, {debugMode,room,dragable } from './controller.js'
+import updateGamepadstatus, {debugMode,dragable } from './controller.js'
 import Collitions from './CollitionsObj.js'
 import{yIndex}from './anima.js'
 import IntroScreen from './IntroScreen.js'
 import Debugar from './debug.js'
 import {mouseCollideBloco,bloco,monitor,slime,orcs,
-loteOrcs,blocos,loteBlocos,text,txt,rand,mouse}from './globalVar.js'
+loteOrcs,blocos,loteBlocos,text,txt,rand,mouse, room}from './globalVar.js'
 import DragDrop from './DragDrop.js'
 import OnOff from './OnOff.js'
 import MovePoint from './movePoint.js'
@@ -18,7 +18,6 @@ import animaSprite from './animaSprite.js'
 import particles from './particles.js'
 import creatures from './creatures.js'
 import boxesInteracts from './worldInteract.js'
-
 
 //////GAME////
 
@@ -35,26 +34,27 @@ if(debugMode){
 Debugar();
 } 
 
-if(room==0){
+if(room[0]==0){
 
   canvas.style.backgroundColor="black";
   IntroScreen();
 
-}else if(room==1){
+}else if(room[0]==1){
 
   canvas.style.backgroundColor="black";
   DragDrop();
-
-}else if(room==2){
+  
+}else if(room[0]==2){
 
   canvas.style.backgroundColor="black";
   OnOff();
 
-}else if (room==3){
+}else if (room[0]==3){
  
   Collitions();
   rooms.Tiles();
-  animaSprite.Animaboxes();
+  rooms.RoomObjects();
+  animaSprite.AnimaElements();
   animaSprite.AnimaPlayer();
   //playerMecanics.MoveBlock();
   playerMecanics.MovePlayer();
@@ -64,13 +64,12 @@ if(room==0){
   //creatures.FlyButterfly()
   boxesInteracts();
 }
-else if (room==4){
-
-  rooms.soloB();
+else if (room[0]==4){
+  
   MovePoint();
   
   }
-  else if (room==5){
+  else if (room[0]==5){
     canvas.style.backgroundColor="black";
    
     }

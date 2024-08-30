@@ -1,5 +1,6 @@
 import {mouse,moveR,moveL,moveU,moveD, move,
-   pointActive, moveToPoint, player, grass, playerDir, interact } from './globalVar.js';
+   pointActive, moveToPoint,
+    player, grass, playerDir, interact, room } from './globalVar.js';
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 
@@ -9,7 +10,7 @@ let debug=new Obj(0,0,0,0),
  debugMode=false,
  click=false,
  dragable=false;
- let room=3
+ //let room=3
 
 ////controles////
 
@@ -31,21 +32,21 @@ window.addEventListener("keydown",function(event){
    
    if (k=="0"){
 
-    room=0
+    room[0]=0
 
   }else if
  (k =="1" ){
-room=1
+room[0]=1
  
                         
   }else if (k=="2"){
 
-room=2
+room[0]=2
 
   }
   else if (k=="4"){
 
-    room=4
+    room[0]=4
     
       }else if (k=="t"){
   debugMode=true           
@@ -53,11 +54,11 @@ room=2
   debugMode=false           
   }
   else if (k=="3"){
-        room=3  
+        room[0]=3  
         
   }
   else if (k=="5"){
-    room=5  
+    room[0]=5  
     
 }
   else if (k=="d"){

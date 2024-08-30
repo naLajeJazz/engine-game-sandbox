@@ -9,38 +9,19 @@ import { player,moveR,moveL,moveU,moveD, move,boxes, boxesMaskD,
    playerInteractDir,
    interact,
    playerBoxMsg,
-   grass} from "./globalVar.js"
+   grass,
+   pedra,
+   room} from "./globalVar.js"
 import { blockImg, dirtImg, grassImg, hairImg,
    pantsImg, playerImg, playerPushImg, roupaImg } from "./Img.js"
 import { debugMode } from './controller.js';
 
 
-
-  
-const Animaboxes=()=>{
-  if(!debugMode){
-
-   
-  for(let i=0;i<loteBoxes;i++){  
-                                                
-    boxes[i].Draw("red")
-   
-    }; 
-
-}
-}
-
 const AnimaPlayer=()=>{
-
-
-
-
-
-
 
    /////Animaçao do movimento player 
    
-   playerInteractDir.DrawRect("white",0.2);
+   ///playerInteractDir.DrawRect("white",0.2);
 
    if (!push[0]&&moveR[0]&&moveU[0]){
         
@@ -194,6 +175,24 @@ playerInteractDir.y=player.y-64
 
       
           
-  }     
+  };
 
-export default {AnimaPlayer,Animaboxes}
+const AnimaElements=()=>{
+    ///desenha elemento pedra na tela
+    if(room[0]==3){
+    pedra.SpriteAnime(blockImg,0,0,64,64)
+    }
+
+    /*
+      ///desenha os boxesmask na tela
+      for(let i=0;i<loteBoxes;i++){   
+        boxesMaskL[i].DrawRect("blue",0.5)
+        boxesMaskR[i].DrawRect("green",0.5)
+        boxesMaskD[i].DrawRect("yellow",0.5)
+        boxesMaskU[i].DrawRect("white",0.5)
+        boxes[i].Draw("red",0.2)};
+  */
+   
+  }    
+
+export default {AnimaPlayer,AnimaElements}

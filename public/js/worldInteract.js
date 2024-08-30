@@ -14,7 +14,7 @@ import { player,moveR,moveL,moveU,moveD, move,boxes, boxesMaskD,
 
 const boxesInteracts=()=>{
 
-
+////trabalhar nisso
  if(interact[0]){
 
     if (boxesmask[0].collideBolean){

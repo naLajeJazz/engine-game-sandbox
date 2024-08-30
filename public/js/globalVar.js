@@ -7,7 +7,7 @@ canvas.style.backgroundColor="black";
 
 ////Objetos////
 
-
+let room=[3];
 let mouse=new Obj(200,300,64,64);
 
 //
@@ -69,7 +69,7 @@ for(let i=0;i<loteOrcs;i++){
   
 };
 
-let player = new Obj(canvas.width/2,canvas.height/2,64,64,3),
+let player = new Obj(canvas.width/2+100,canvas.height/2+100,64,64,3),
 playerDir=[2],
 playerInteractDir=new Obj(player.x,player.y,player.w,player.h),
 interact=[false],
@@ -115,17 +115,17 @@ let boxesMaskD=[];
 let boxesMaskU=[];
 let loteBoxes=4;
 for(let i=0;i<loteBoxes;i++){
-  boxes[i]=new Obj(0,0,64,64)
+  boxes[i]=new Obj()
   boxesmask[i]=new Obj(boxes[i].x,boxes[i].y,boxes[i].w,boxes[i].h)
-  boxesMaskL[i]=new Obj(boxes[i].x-boxes[i].w/32,boxes[i].y,boxes[i].w/boxes[i].w,boxes[i].h)
-  boxesMaskR[i]=new Obj(boxes[i].x+boxes[i].w+boxes[i].w/32,boxes[i].y,boxes[i].w/boxes[i].w,boxes[i].h)
-  boxesMaskD[i]=new Obj(boxes[i].x,boxes[i].y+boxes[i].h+boxes[i].h/32,boxes[i].w,boxes[i].h/boxes[i].h)
-  boxesMaskU[i]=new Obj(boxes[i].x,boxes[i].y-boxes[i].h/32,boxes[i].w,boxes[i].h/boxes[i].h)
+  boxesMaskL[i]=new Obj()
+  boxesMaskR[i]=new Obj()
+  boxesMaskD[i]=new Obj()
+  boxesMaskU[i]=new Obj()
   
 };
 
 
-let circle=new Obj(canvas.width/2,canvas.height/2)
+let pedra=new Obj()
 
 let ground=[]
 let grass=new Obj(0,0,0,0,player.spd),
@@ -141,9 +141,9 @@ moveU,moveD,move,pointCollidePlayer,pointActive,point,moveToPoint,
 player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,grass,ground,
 loteGrround,dirT,lotedirt,roupa,pants,boxes,boxesMaskD,boxesMaskL,
 boxesMaskR,boxesMaskU,loteBoxes,playerMask,push,playerMaskPushU,
-playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask,circle,
+playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask,
 creatureRand, creatureDir,butterfly,playerDir,playerInteractDir,
-interact,playerBoxMsg
+interact,playerBoxMsg,room,pedra
 
 
 }

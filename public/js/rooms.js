@@ -6,34 +6,37 @@ import { player,moveR,moveL,moveU,moveD, move,
    playerMask,
    playerMaskPushR,
    grass,
+   room,
+   pedra,
   
 } from "./globalVar.js"
 import { blockImg, dirt2Img, dirtImg, grass2Img, grassImg } from "./Img.js"
 import { debugMode } from './controller.js';
+import boxesPosition from './ElementsRoomPos.js';
+import ElementsRoomPos from './ElementsRoomPos.js';
 
 
 
-  const Tiles=()=>{
-    if(!debugMode){
-    //canvas.style.backgroundColor="#313702";
-grass.Sprite(grassImg,2000,1200)
-    
-      }else{
+const Tiles=()=>{
+
+if(!debugMode&&room[0]==3){
+   
+///background tiles set
+grass.Sprite(grassImg,2000,1200);
+   
+}else{
         canvas.style.backgroundColor="black";
       }
-  }
-  const soloB=()=>{
-    if(!debugMode){
-                  canvas.style.backgroundColor="#23142d";        
-                  for(let i=0;i<loteGrround;i++){                                               
-                    ground[i].Sprite(grass2Img,64,64)
-                    };  
-              
-                    for(let i=0;i<lotedirt;i++){                                               
-                      dirT[i].Sprite(dirt2Img,64,64)
-                      };  
-                    }
-               
-                }
+};
 
-  export default{Tiles,soloB} 
+const RoomObjects=()=>{
+
+///collitions boxes positions
+ElementsRoomPos.boxesPosition();
+
+///posicao de objetos(ja com suas colisoes)
+ElementsRoomPos.elementsPosition();
+
+  }
+
+export default{Tiles,RoomObjects} 
