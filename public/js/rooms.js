@@ -1,6 +1,6 @@
 import {canvas} from './obj.js'
 import { player,moveR,moveL,moveU,moveD, move,
-   ground, loteGrround, dirT, lotedirt, boxes, boxesMaskD,
+   dirT, lotedirt, boxes, boxesMaskD,
    boxesMaskU,boxesMaskR,boxesMaskL,
    loteBoxes,
    playerMask,
@@ -8,6 +8,7 @@ import { player,moveR,moveL,moveU,moveD, move,
    grass,
    room,
    pedra,
+   camera,
   
 } from "./globalVar.js"
 import { blockImg, dirt2Img, dirtImg, grass2Img, grassImg } from "./Img.js"
@@ -17,13 +18,15 @@ import ElementsRoomPos from './ElementsRoomPos.js';
 
 
 
+
 const Tiles=()=>{
 
 if(!debugMode&&room[0]==3){
    
 ///background tiles set
+///o sistema de camera pode manipular grass w e grass h
 grass.Sprite(grassImg,2000,1200);
-   
+
 }else{
         canvas.style.backgroundColor="black";
       }

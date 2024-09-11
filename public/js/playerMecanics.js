@@ -1,5 +1,5 @@
 import { player,moveR,moveL,moveU,moveD, move,
-   ground, loteGrround, dirT, lotedirt, boxes, boxesMaskD,
+   dirT, lotedirt, boxes, boxesMaskD,
    boxesMaskU,boxesMaskR,boxesMaskL,
    loteBoxes,
    playerMask,
@@ -23,8 +23,8 @@ if(moveR[0]
   &&!boxesMaskL[2].collideBolean
   &&!boxesMaskL[3].collideBolean){
     if(moveU[0]||moveD[0]){player.spd=2}
-     player.x+=player.spd
-     //grass.x-=player.spd
+    // player.x+=player.spd
+     grass.x-=player.spd
      playerDir[0]=0
     }
 
@@ -34,8 +34,8 @@ if(moveL[0]
   &&!boxesMaskR[2].collideBolean
   &&!boxesMaskR[3].collideBolean){
     if(moveU[0]||moveD[0]){player.spd=2}
-     player.x-=player.spd
-     //grass.x+=player.spd
+    //player.x-=player.spd
+     grass.x+=player.spd
      playerDir[0]=1
     }
     
@@ -45,8 +45,8 @@ if(moveD[0]
   &&!boxesMaskU[1].collideBolean
   &&!boxesMaskU[2].collideBolean
   &&!boxesMaskU[3].collideBolean){
-     player.y+=player.spd
-     //grass.y-=player.spd
+     //player.y+=player.spd
+     grass.y-=player.spd
      playerDir[0]=2
     }
 
@@ -55,8 +55,8 @@ if(moveU[0]
   &&!boxesMaskD[1].collideBolean
   &&!boxesMaskD[2].collideBolean
   &&!boxesMaskD[3].collideBolean){
-     player.y-=player.spd
-     //grass.y+=player.spd;
+     //player.y-=player.spd
+     grass.y+=player.spd;
      playerDir[0]=3;
     }
 

@@ -1,6 +1,6 @@
 import {canvas} from './obj.js'
 import { player,moveR,moveL,moveU,moveD, move,
-   ground, loteGrround, dirT, lotedirt, boxes, boxesMaskD,
+    dirT, lotedirt, boxes, boxesMaskD,
    boxesMaskU,boxesMaskR,boxesMaskL,
    loteBoxes,
    playerMask,

@@ -2,8 +2,20 @@ import Obj from './obj.js'
 import {canvas} from './obj.js'
 
 canvas.width=window.innerWidth;
-canvas.height=window.innerHeight
+canvas.height=window.innerHeight;
+
+
+//canvas.width=screen.availWidth;
+//canvas.height=screen.availHeight;
+
+//canvas.width=screen.width;
+//canvas.height=screen.height;
+
+
+
+
 canvas.style.backgroundColor="black";
+
 
 ////Objetos////
 
@@ -26,13 +38,7 @@ let monitor=new Obj(canvas.width/2-150,canvas.height/2-150,300,300);
 
 
 
-let slime=new Obj(monitor.x+1,monitor.y-64,64,64,0.5),slimeDir="";
-setInterval(() => {
-  slimeDir="e"
-}, 4000);
-setInterval(() => {
-  slimeDir="d"
-}, 8000);
+
 //
 let creature=new Obj(100,100,64,64,0.5),
 creatureDir=[],
@@ -69,7 +75,7 @@ for(let i=0;i<loteOrcs;i++){
   
 };
 
-let player = new Obj(canvas.width/2+100,canvas.height/2+100,64,64,3),
+let player = new Obj(canvas.width/2,canvas.height/2,64,64,3),
 playerDir=[2],
 playerInteractDir=new Obj(player.x,player.y,player.w,player.h),
 interact=[false],
@@ -127,23 +133,29 @@ for(let i=0;i<loteBoxes;i++){
 
 let pedra=new Obj()
 
-let ground=[]
-let grass=new Obj(0,0,0,0,player.spd),
-loteGrround=40
-for(let i=0;i<loteGrround;i++){
- ground[i]=new Obj(Math.floor(Math.random()*canvas.width),Math.floor(Math.random()*canvas.height))
- };
 
+let grass=new Obj(0,0,2000,1200,player.spd);
+
+
+ let slime=new Obj(300,300,64,64,0.5),slimeDir="parado";
+ setInterval(() => {
+   slimeDir="e"
+ }, 4000);
+ setInterval(() => {
+   slimeDir="d"
+ }, 8000);
+
+
+let camera=new Obj(0,0,400,400)
 
 export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
 loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,
 moveU,moveD,move,pointCollidePlayer,pointActive,point,moveToPoint,
-player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,grass,ground,
-loteGrround,dirT,lotedirt,roupa,pants,boxes,boxesMaskD,boxesMaskL,
+player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,grass,dirT,lotedirt,roupa,pants,boxes,boxesMaskD,boxesMaskL,
 boxesMaskR,boxesMaskU,loteBoxes,playerMask,push,playerMaskPushU,
 playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask,
 creatureRand, creatureDir,butterfly,playerDir,playerInteractDir,
-interact,playerBoxMsg,room,pedra
+interact,playerBoxMsg,room,pedra,camera
 
 
 }

@@ -59,7 +59,7 @@ if(room[0]==0){
   //playerMecanics.MoveBlock();
   playerMecanics.MovePlayer();
   //MovePoint();
-  //creatures.Slime();
+  creatures.Slime();
   //particles.Rain();
   //creatures.FlyButterfly()
   boxesInteracts();

@@ -1,4 +1,4 @@
-import Obj, {canvas} from './obj.js'
+
 import { xIndexPlayer, yIndexPlayer } from "./anima.js"
 import { player,moveR,moveL,moveU,moveD, move,boxes, boxesMaskD,
    boxesMaskU,boxesMaskR,boxesMaskL,
@@ -11,16 +11,20 @@ import { player,moveR,moveL,moveU,moveD, move,boxes, boxesMaskD,
    playerBoxMsg,
    grass,
    pedra,
-   room} from "./globalVar.js"
+   room,
+   camera,
+  } from "./globalVar.js"
 import { blockImg, dirtImg, grassImg, hairImg,
    pantsImg, playerImg, playerPushImg, roupaImg } from "./Img.js"
 import { debugMode } from './controller.js';
+import Obj from "./obj.js";
 
 
 const AnimaPlayer=()=>{
 
    /////Animaçao do movimento player 
-   
+  
+   player.hudMsg(player.x,player.y,"white","20px DePixel",move[0])
    ///playerInteractDir.DrawRect("white",0.2);
 
    if (!push[0]&&moveR[0]&&moveU[0]){
@@ -155,7 +159,7 @@ playerInteractDir.y=player.y-64
     
   }
 
-
+  
       //muda animação quando player empurrar boxes
       
       if(push[0]&&moveD[0]){   
@@ -180,7 +184,7 @@ playerInteractDir.y=player.y-64
 const AnimaElements=()=>{
     ///desenha elemento pedra na tela
     if(room[0]==3){
-    pedra.SpriteAnime(blockImg,0,0,64,64)
+    //pedra.SpriteAnime(blockImg,0,0,64,64)
     }
 
     /*

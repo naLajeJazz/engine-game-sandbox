@@ -7,7 +7,8 @@ import{mouseCollideBloco,bloco,orcs,loteOrcs,
   playerMaskPushU,
   boxesmask,
   grass,
-  playerInteractDir
+  playerInteractDir,
+  slime
 }from './globalVar.js'
 
 
@@ -74,6 +75,7 @@ for(let i=0;i<loteBoxes;i++){
   
 
 ///CHECA AS COLISOES DAS MASKS
+slime.collide(player.x,player.y,player.w,player.h)
 
 mouseCollideBloco.collide(bloco.x,bloco.y,bloco.w,bloco.h);
 
