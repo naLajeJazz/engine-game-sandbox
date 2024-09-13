@@ -18,6 +18,7 @@ const Debugar=()=>{
                   room ${room[0]}
                   creatureDir ${creatureDir}
                   gras.spd ${grass.spd}
+                  ${canvas.width }  ${canvas.height}
                   
                   
 

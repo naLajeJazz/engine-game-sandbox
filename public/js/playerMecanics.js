@@ -12,7 +12,8 @@ import { player,moveR,moveL,moveU,moveD, move,
    moveRd,
    moveLu,
    moveLd,
-   camera
+   camera,
+   cameraMove
    } from "./globalVar.js"
 import { canvas } from "./obj.js"
 
@@ -46,13 +47,13 @@ if(moveU[0]||moveD[0]){player.spd=2}
 
 if(camera.x+camera.w>=canvas.width
    &&grass.x+grass.w>=canvas.width){
-
+      cameraMove[0]=true
       grass.x-=player.spd
 
 }else
 {
    player.x+=player.spd
-   
+   cameraMove[0]=false
 
 }
 }
@@ -68,12 +69,13 @@ if(moveL[0]
 
     if(camera.x<=0
       &&grass.x<=0){
-    
+      cameraMove[0]=true
       grass.x+=player.spd
       
 
     }else{
       player.x-=player.spd
+      cameraMove[0]=false
     }
     
     }
@@ -89,12 +91,13 @@ if(moveD[0]
 
     if(camera.y+camera.h>=canvas.height
       &&grass.y+grass.h>canvas.height){
-
+        cameraMove[0]=true
       grass.y-=player.spd
       
 
     }else{
       player.y+=player.spd
+      cameraMove[0]=false
     }
     }
 
@@ -108,11 +111,12 @@ if(moveU[0]
 
     if(camera.y<=0&&grass.y<0){
 
-      
+      cameraMove[0]=true
       grass.y+=player.spd;
      
     }else{
       player.y-=player.spd
+      cameraMove[0]=false
     }
     }
 
@@ -120,6 +124,7 @@ if(moveU[0]
 if(!move[0]){
       player.spd=3;  
       push[0]=false;
+      cameraMove[0]=false
       
     }
   

@@ -5,16 +5,47 @@ import {xIndex,yIndex,xIndexSlime,yIndexSlime, xIndexButt, yIndexButt} from './a
 import { slimeDir,loteOrcs, orcs,monitor,slime,
 txt, creatureDir, butterfly, grass, player,
 move, playerDir, moveL, moveR, moveU, moveD,
- moveLd, moveRu, moveRd, moveLu } from './globalVar.js';
+ moveLd, moveRu, moveRd, moveLu, cameraMove } from './globalVar.js';
 import { debugMode } from './controller.js';
 
 
 const Slime=()=>{
                 
 
- slime.hudMsg(slime.x+64,slime.y,"white","20px DePixel",creatureDir[0])
+ slime.hudMsg(slime.x+64,slime.y,"white","20px DePixel",`${slime.x }  ${slime.y}  ${creatureDir[0]}`)
 
-          
+
+
+ if(creatureDir[0]==0){
+                  slime.x+=slime.spd
+                
+                 
+                  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h);
+}else
+if(creatureDir[0]==1){
+                 slime.x-=slime.spd
+                 slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime,slime.w,slime.h)
+}else
+if(creatureDir[0]==2){
+                  slime.y+=slime.spd
+                  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h);
+}else
+if(creatureDir[0]==3){
+                 slime.y-=slime.spd
+                 slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h);
+}else
+if(creatureDir[0]==4){
+                  slime.spd=0
+                  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h);
+}slime.spd=1
+
+
+
+
+
+
+
+   /*       
  //se a direção da creature for 4(nao mova)
 
  if(creatureDir[0]==4){
@@ -35,27 +66,28 @@ const Slime=()=>{
                   slime.x+=slime.spd
                   slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h);
 
-if(moveL[0]){
+if(moveL[0]&&cameraMove[0]){
 
                   slime.x+=slime.spd+grass.spd;
                  
 }
 
 
-if(moveR[0]){
+if(moveR[0]&&cameraMove[0]){
 
                   slime.x+=slime.spd-grass.spd
                  
 }
 
 
-if(moveU[0]){
+if(moveU[0]&&cameraMove[0]){
                   
-                  slime.y-=slime.spd-grass.spd
+                  slime.y-=-grass.spd
+                  slime.x-=slime.spd
                  
                   
 }
-if(moveD[0]){
+if(moveD[0]&&cameraMove[0]){
                   slime.y+=slime.spd-grass.spd
                   
                   
@@ -68,7 +100,7 @@ if(moveR[0]&&moveU[0]){
 
 
 
- if (!move[0]){
+ if (!move[0]&&cameraMove[0]){
                   slime.x+=slime.spd
                   
 }
@@ -110,7 +142,7 @@ if (!move[0]){
 
  
                                                                       
-                                                                    
+  */                                                                  
 }
 
 /////////

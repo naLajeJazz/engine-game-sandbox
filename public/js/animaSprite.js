@@ -13,6 +13,7 @@ import { player,moveR,moveL,moveU,moveD, move,boxes, boxesMaskD,
    pedra,
    room,
    camera,
+   cameraMove,
   } from "./globalVar.js"
 import { blockImg, dirtImg, grassImg, hairImg,
    pantsImg, playerImg, playerPushImg, roupaImg } from "./Img.js"
@@ -26,9 +27,10 @@ const AnimaPlayer=()=>{
 
    /////Animaçao do movimento player 
   
-   player.hudMsg(player.x,player.y,"white","20px DePixel",`${player.x }  ${player.y}`)
-   //camera.DrawRect("red",6,0.5)
-   //camera.hudMsg(camera.x,camera.y,"white","20px DePixel",`${camera.x }  ${camera.y}`)
+   player.hudMsg(player.x,player.y,"white","20px DePixel",`x: ${player.x }  y: ${player.y}  ${cameraMove[0]}`)
+   camera.DrawRect("red",6,0.5)
+   camera.hudMsg(camera.x,camera.y,"white","20px DePixel",`cam x: ${camera.x }  cam y :${camera.y}`)
+   camera.hudMsg(camera.x,camera.y+64,"white","20px DePixel",`grass x: ${grass.x } grass y: ${grass.y} `)
 
    if (!push[0]&&moveR[0]&&moveU[0]){
         

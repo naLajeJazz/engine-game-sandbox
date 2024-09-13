@@ -1,15 +1,15 @@
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
+//canvas.width=window.innerWidth;
+//canvas.height=window.innerHeight;
 
 
 //canvas.width=screen.availWidth;
 //canvas.height=screen.availHeight;
 
-//canvas.width=screen.width;
-//canvas.height=screen.height;
+canvas.width=screen.width;
+canvas.height=screen.height;
 
 
 
@@ -139,9 +139,10 @@ let pedra=new Obj()
 
 
 let grass=new Obj(-453,-246,2000,1200,player.spd);
+let grass2=new Obj(0,0,canvas.width,canvas.height);
 
 
- let slime=new Obj(300,300,64,64,0.1),slimeDir="parado";
+ let slime=new Obj(300,300,64,64,1),slimeDir="parado";
  setInterval(() => {
    slimeDir="e"
  }, 4000);
@@ -150,7 +151,8 @@ let grass=new Obj(-453,-246,2000,1200,player.spd);
  }, 8000);
 
 
-let camera=new Obj(player.x-320,player.y-192,704,448)
+let camera=new Obj(player.x-320,player.y-192,704,448),
+cameraMove=[false];
 
 export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
 loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,
@@ -159,7 +161,8 @@ player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,grass,dirT,lotedi
 boxesMaskR,boxesMaskU,loteBoxes,playerMask,push,playerMaskPushU,
 playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask,
 creatureRand, creatureDir,butterfly,playerDir,playerInteractDir,
-interact,playerBoxMsg,room,pedra,camera,moveLd,moveLu,moveRd,moveRu
+interact,playerBoxMsg,room,pedra,camera,moveLd,moveLu,moveRd,
+moveRu,cameraMove,grass2
 
 
 }

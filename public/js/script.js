@@ -18,6 +18,7 @@ import animaSprite from './animaSprite.js'
 import particles from './particles.js'
 import creatures from './creatures.js'
 import boxesInteracts from './worldInteract.js'
+import relogio from './time.js'
 
 //////GAME////
 
@@ -25,6 +26,11 @@ import boxesInteracts from './worldInteract.js'
 function Game (){
 requestAnimationFrame(Game,canvas);
 ctx.clearRect(0,0,canvas.width,canvas.height);
+
+
+relogio()
+
+
 
                     /////GAME UPDATE//////
                             
@@ -60,7 +66,7 @@ if(room[0]==0){
   //playerMecanics.MoveBlock();
   playerMecanics.MovePlayer();
   //MovePoint();
-  //creatures.Slime();
+  creatures.Slime();
   //particles.Rain();
   //creatures.FlyButterfly()
   boxesInteracts();

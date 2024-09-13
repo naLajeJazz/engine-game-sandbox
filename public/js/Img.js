@@ -18,13 +18,13 @@ let player2Img = document.createElement("IMG");
 player2Img.setAttribute("src","./assets/sp1.png");
 
 let grassImg = document.createElement("IMG");
-grassImg.setAttribute("src","./assets/room1.png");
+grassImg.setAttribute("src","./assets/room0.png");
 
 let dirtImg = document.createElement("IMG");
 dirtImg.setAttribute("src","./assets/dirt.png");
 
 let grass2Img = document.createElement("IMG");
-grass2Img.setAttribute("src","./assets/grass2.png");
+grass2Img.setAttribute("src","./assets/x.png");
 
 let dirt2Img = document.createElement("IMG");
 dirt2Img.setAttribute("src","./assets/dirt2.png");

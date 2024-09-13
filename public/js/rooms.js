@@ -9,6 +9,7 @@ import { player,moveR,moveL,moveU,moveD, move,
    room,
    pedra,
    camera,
+   grass2,
   
 } from "./globalVar.js"
 import { blockImg, dirt2Img, dirtImg, grass2Img, grassImg } from "./Img.js"
@@ -26,6 +27,7 @@ if(!debugMode&&room[0]==3){
 ///background tiles set
 ///o sistema de camera pode manipular grass w e grass h
 grass.Sprite(grassImg,2000,1200);
+grass2.Sprite(grass2Img,canvas.width,canvas.height);
 
 }else{
         canvas.style.backgroundColor="black";
