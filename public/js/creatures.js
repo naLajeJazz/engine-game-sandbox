@@ -3,61 +3,119 @@ import { butterflyImg, grass2Img, monitorImg,slimeImg } from "./Img.js";
 
 import {xIndex,yIndex,xIndexSlime,yIndexSlime, xIndexButt, yIndexButt} from './anima.js'
 import { slimeDir,loteOrcs, orcs,monitor,slime,
-                  txt, creatureDir, butterfly, grass, player,
-                   move, playerDir, moveL, moveR } from './globalVar.js';
+txt, creatureDir, butterfly, grass, player,
+move, playerDir, moveL, moveR, moveU, moveD,
+ moveLd, moveRu, moveRd, moveLu } from './globalVar.js';
 import { debugMode } from './controller.js';
 
 
 const Slime=()=>{
+                
+
+ slime.hudMsg(slime.x+64,slime.y,"white","20px DePixel",creatureDir[0])
+
+          
+ //se a direção da creature for 4(nao mova)
+
+ if(creatureDir[0]==4){
+
+                  //fixe a posição da creatura na posição do tile
                   
+                  slime.x=grass.x
+                  slime.y=grass.y
+                  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+128,slime.w,slime.h)
+                                                      
+                  } 
+ 
+ 
+ 
+                  //se a direção da creature for R
+                  if(creatureDir[0]==0){
 
- slime.hudMsg(slime.x+64,slime.y,"white","20px DePixel",slime.collideBolean)
+                  slime.x+=slime.spd
+                  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h);
 
-                  if(slimeDir=="parado"){
-
-slime.x=grass.x
-slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+128,slime.w,slime.h)
-                                    
-}else
-                  if(slimeDir=="d"){
 if(moveL[0]){
 
-                  slime.x+=slime.spd+grass.spd
-                  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h) 
+                  slime.x+=slime.spd+grass.spd;
+                 
 }
+
+
 if(moveR[0]){
 
                   slime.x+=slime.spd-grass.spd
-                  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h) 
-}
- if (!move[0]){
-                  slime.x+=slime.spd
-                  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h)
+                 
 }
 
-}else if(slimeDir=="e"){
+
+if(moveU[0]){
+                  
+                  slime.y-=slime.spd-grass.spd
+                 
+                  
+}
+if(moveD[0]){
+                  slime.y+=slime.spd-grass.spd
+                  
+                  
+ }
+
+if(moveR[0]&&moveU[0]){
+                  
+                 
+}
+
+
+
+ if (!move[0]){
+                  slime.x+=slime.spd
+                  
+}
+                  
+}
+else
+                 //se a direção da creature for L
+                  if(creatureDir[0]==1){
+
 if(moveR[0]){
 
                   slime.x-=slime.spd+grass.spd
                   slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime,slime.w,slime.h)
-}
+}else
 if(moveL[0]){
 
                   slime.x-=slime.spd-grass.spd
                   slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime,slime.w,slime.h) 
-}
+}else
+if(moveU[0]){
+                  
+                  slime.y-=-grass.spd
+                  slime.x-=slime.spd
+                  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime,slime.w,slime.h)
+                  }else
+if(moveD[0]){
+                  slime.y+=-grass.spd
+                  slime.x-=slime.spd
+                  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime,slime.w,slime.h)
+                                    }else
 if (!move[0]){
                   slime.x-=slime.spd
                   slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime,slime.w,slime.h)
 }
 
 
-                  }
+}
+
 
  
                                                                       
                                                                     
 }
+
+/////////
+
+
 
 const FlyButterfly=()=>{
 

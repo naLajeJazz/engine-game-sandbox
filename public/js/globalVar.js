@@ -40,10 +40,10 @@ let monitor=new Obj(canvas.width/2-150,canvas.height/2-150,300,300);
 
 
 //
-let creature=new Obj(100,100,64,64,0.5),
-creatureDir=[],
+let creature=new Obj(100,100,64,64,0),
+creatureDir=[0],
 creatureRand=0;
-setInterval(() => {creatureDir=[creatureRand=Math.floor((Math.random() * 5) )] }, 5000);
+//setInterval(() => {creatureDir=[creatureRand=Math.floor((Math.random() * 2) )] }, 5000);
 //
 let butterfly=new Obj(canvas.width/2,canvas.height/2,16,16,0.1);
 
@@ -84,6 +84,10 @@ moveR=[false],
 moveL=[false],
 moveU=[false],
 moveD=[false],
+moveRu=[false],
+moveLu=[false],
+moveRd=[false],
+moveLd=[false],
 move=[false],
 push=[false],
 playerMask=new Obj(player.x,player.y,player.w-48,player.h-48),
@@ -134,10 +138,10 @@ for(let i=0;i<loteBoxes;i++){
 let pedra=new Obj()
 
 
-let grass=new Obj(0,0,2000,1200,player.spd);
+let grass=new Obj(-453,-246,2000,1200,player.spd);
 
 
- let slime=new Obj(300,300,64,64,0.5),slimeDir="parado";
+ let slime=new Obj(300,300,64,64,0.1),slimeDir="parado";
  setInterval(() => {
    slimeDir="e"
  }, 4000);
@@ -146,7 +150,7 @@ let grass=new Obj(0,0,2000,1200,player.spd);
  }, 8000);
 
 
-let camera=new Obj(0,0,400,400)
+let camera=new Obj(player.x-320,player.y-192,704,448)
 
 export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
 loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,
@@ -155,7 +159,7 @@ player2,moveR2,moveL2,moveU2,moveD2,move2 ,pointCollidePlayer2,grass,dirT,lotedi
 boxesMaskR,boxesMaskU,loteBoxes,playerMask,push,playerMaskPushU,
 playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask,
 creatureRand, creatureDir,butterfly,playerDir,playerInteractDir,
-interact,playerBoxMsg,room,pedra,camera
+interact,playerBoxMsg,room,pedra,camera,moveLd,moveLu,moveRd,moveRu
 
 
 }

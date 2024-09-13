@@ -29,7 +29,7 @@ window.addEventListener("keyup",()=>{
 window.addEventListener("keydown",function(event){
 
   let k= event.key;
-   
+   console.log(k)
    if (k=="0"){
 
     room[0]=0
@@ -77,8 +77,8 @@ room[0]=2
     moveD[0]=true 
     move[0]=true    
   }
-  else if (k=="o"){
-    
+  else if (k==" "){
+   //backspace
   }
   else if (k=="x"){
     

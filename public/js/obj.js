@@ -42,11 +42,12 @@ export default class Obj {
     ctx.fillRect(this.x, this.y, this.w,this.h);
     ctx.restore()
   };
-  DrawRect(color,lineWidth){
+  DrawRect(color,lineWidth,alpha){
     ctx.save()
     ctx.beginPath();
     ctx.lineWidth =lineWidth;
     ctx.strokeStyle = color;
+    ctx.globalAlpha = alpha;
     ctx.rect(this.x, this.y, this.w,this.h);
     ctx.stroke();
     ctx.restore()

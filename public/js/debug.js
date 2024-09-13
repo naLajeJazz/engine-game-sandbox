@@ -9,28 +9,30 @@ import { move, moveR, moveToPoint, slimeDir,
    playerMaskPushR, playerMaskPushD, 
    playerMaskPushU, playerMaskPushL, boxesmask, 
    creatureRand, creatureDir, playerDir,
-    playerInteractDir, interact,room, grass} from './globalVar.js'
+    playerInteractDir, interact,room, grass, moveRu, moveLu, moveRd, moveLd} from './globalVar.js'
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 const Debugar=()=>{
                   debug.hudMsg(debug.x,debug.y+16,"red","20px DePixel",` 
                   player.spd ${player.spd}
                   room ${room[0]}
-                  creatureRand ${creatureRand}
                   creatureDir ${creatureDir}
                   gras.spd ${grass.spd}
                   
                   
 
                   `)
-                debug.hudMsg(debug.x,debug.y+42,"green","20px DePixel",`
-                
-               move ${move}
-               playerDir ${playerDir}
-               0 ${boxesmask[0].collideBolean}
-               1 ${boxesmask[1].collideBolean}
-               2 ${boxesmask[2].collideBolean}
-               3 ${boxesmask[3].collideBolean}
+                debug.hudMsg(debug.x,debug.y+48,"white","22px DePixel",`
+move ${move} 
+  playerDir ${playerDir}
+  R: ${moveR[0]}
+  L: ${moveL[0]}
+  U: ${moveU[0]}
+  D: ${moveD[0]}
+  Ru: ${moveRu[0]}
+  Rd: ${moveRd[0]}
+  Lu: ${moveLu[0]}
+  Ld: ${moveLd[0]}
                
                   `)
 
