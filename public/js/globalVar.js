@@ -43,7 +43,7 @@ let monitor=new Obj(canvas.width/2-150,canvas.height/2-150,300,300);
 let creature=new Obj(100,100,64,64,0),
 creatureDir=[0],
 creatureRand=0;
-//setInterval(() => {creatureDir=[creatureRand=Math.floor((Math.random() * 2) )] }, 5000);
+//setInterval(() => {creatureDir=[creatureRand=Math.floor((Math.random() * 4) )] }, 1000);
 //
 let butterfly=new Obj(canvas.width/2,canvas.height/2,16,16,0.1);
 
@@ -152,7 +152,9 @@ let grass2=new Obj(0,0,canvas.width,canvas.height);
 
 
 let camera=new Obj(player.x-320,player.y-192,704,448),
-cameraMove=[false];
+cameraMove=[false],
+cameraDir=[],
+cameraDiagonal=[false];
 
 export{ mouseCollideBloco,bloco,monitor,slime,orcs,loteOrcs,blocos,
 loteBlocos,text,txt,rand,onOffBtn,slimeDir,player,moveR,mouse,moveL,
@@ -162,7 +164,7 @@ boxesMaskR,boxesMaskU,loteBoxes,playerMask,push,playerMaskPushU,
 playerMaskPushD,playerMaskPushL,playerMaskPushR,boxesmask,
 creatureRand, creatureDir,butterfly,playerDir,playerInteractDir,
 interact,playerBoxMsg,room,pedra,camera,moveLd,moveLu,moveRd,
-moveRu,cameraMove,grass2
+moveRu,cameraMove,grass2,cameraDir,cameraDiagonal
 
 
 }

@@ -5,7 +5,7 @@ import {xIndex,yIndex,xIndexSlime,yIndexSlime, xIndexButt, yIndexButt} from './a
 import { slimeDir,loteOrcs, orcs,monitor,slime,
 txt, creatureDir, butterfly, grass, player,
 move, playerDir, moveL, moveR, moveU, moveD,
- moveLd, moveRu, moveRd, moveLu, cameraMove } from './globalVar.js';
+ moveLd, moveRu, moveRd, moveLu, cameraMove, cameraDir, cameraDiagonal } from './globalVar.js';
 import { debugMode } from './controller.js';
 
 
@@ -15,23 +15,51 @@ const Slime=()=>{
  slime.hudMsg(slime.x+64,slime.y,"white","20px DePixel",`${slime.x }  ${slime.y}  ${creatureDir[0]}`)
 
 
+ if(cameraDir[0]==0&&cameraMove[0]){
+                    
+  slime.x-=grass.spd
+ 
+}else if(cameraDir[0]==1&&cameraMove[0]){
+  slime.x+=grass.spd
+ 
+}else if(cameraDir[0]==2&&cameraMove[0]){
+//slime.x-=0.1
+  slime.y-=2
+ 
+}else if(cameraDir[0]==3&&cameraMove[0]){
+//slime.x-=0.1
+  slime.y+=2
+  
+}
+
+
+
 
  if(creatureDir[0]==0){
-                  slime.x+=slime.spd
-                
-                 
+ 
+  
+  
+                  slime.x+=1
                   slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h);
 }else
 if(creatureDir[0]==1){
-                 slime.x-=slime.spd
+                 slime.x-=1
+
+                      
+              
                  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime,slime.w,slime.h)
 }else
 if(creatureDir[0]==2){
-                  slime.y+=slime.spd
+                  slime.y+=1
+
+                   
                   slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h);
 }else
 if(creatureDir[0]==3){
-                 slime.y-=slime.spd
+                 slime.y-=1
+
+                 
+                
                  slime.SpriteAnime(slimeImg,xIndexSlime,yIndexSlime+64,slime.w,slime.h);
 }else
 if(creatureDir[0]==4){

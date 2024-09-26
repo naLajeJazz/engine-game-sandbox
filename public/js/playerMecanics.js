@@ -13,7 +13,9 @@ import { player,moveR,moveL,moveU,moveD, move,
    moveLu,
    moveLd,
    camera,
-   cameraMove
+   cameraMove,
+   cameraDir,
+   cameraDiagonal
    } from "./globalVar.js"
 import { canvas } from "./obj.js"
 
@@ -23,17 +25,22 @@ const MovePlayer=()=>{
   camera.x=player.x-320
   camera.y=player.y-192
   
- 
-
+ /*
+//bolean de movimentos diagonais
 if (moveR[0]&&moveU[0]){moveRu[0]=true}else{moveRu[0]=false}
 if (moveR[0]&&moveD[0]){moveRd[0]=true}else{moveRd[0]=false}
 if (moveL[0]&&moveU[0]){moveLu[0]=true}else{moveLu[0]=false}
 if (moveL[0]&&moveD[0]){moveLd[0]=true}else{moveLd[0]=false}
+*/
+
+
 
 
 //corrigindo a velocidade nos movimentos diagonais
 if(moveU[0]||moveD[0]){player.spd=2}
 if(moveU[0]||moveD[0]){player.spd=2}
+
+
 
 //Move player
 
@@ -47,6 +54,8 @@ if(moveU[0]||moveD[0]){player.spd=2}
 
 if(camera.x+camera.w>=canvas.width
    &&grass.x+grass.w>=canvas.width){
+      cameraDir[0]=0
+      
       cameraMove[0]=true
       grass.x-=player.spd
 
@@ -69,6 +78,7 @@ if(moveL[0]
 
     if(camera.x<=0
       &&grass.x<=0){
+        cameraDir[0]=1
       cameraMove[0]=true
       grass.x+=player.spd
       
@@ -91,6 +101,7 @@ if(moveD[0]
 
     if(camera.y+camera.h>=canvas.height
       &&grass.y+grass.h>canvas.height){
+        cameraDir[0]=2
         cameraMove[0]=true
       grass.y-=player.spd
       
@@ -110,7 +121,7 @@ if(moveU[0]
     playerDir[0]=3;
 
     if(camera.y<=0&&grass.y<0){
-
+      cameraDir[0]=3
       cameraMove[0]=true
       grass.y+=player.spd;
      
@@ -127,6 +138,8 @@ if(!move[0]){
       cameraMove[0]=false
       
     }
+
+
   
  
   }

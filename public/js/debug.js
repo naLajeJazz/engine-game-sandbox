@@ -9,7 +9,9 @@ import { move, moveR, moveToPoint, slimeDir,
    playerMaskPushR, playerMaskPushD, 
    playerMaskPushU, playerMaskPushL, boxesmask, 
    creatureRand, creatureDir, playerDir,
-    playerInteractDir, interact,room, grass, moveRu, moveLu, moveRd, moveLd} from './globalVar.js'
+    playerInteractDir, interact,room,
+     grass, moveRu, moveLu, moveRd, moveLd,
+      cameraDir, cameraDiagonal} from './globalVar.js'
 import Obj from './obj.js'
 import {canvas} from './obj.js'
 const Debugar=()=>{
@@ -26,6 +28,7 @@ const Debugar=()=>{
                 debug.hudMsg(debug.x,debug.y+48,"white","22px DePixel",`
 move ${move} 
   playerDir ${playerDir}
+  cameraDir ${cameraDir}
   R: ${moveR[0]}
   L: ${moveL[0]}
   U: ${moveU[0]}
